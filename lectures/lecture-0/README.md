@@ -141,7 +141,7 @@ $ geth  --mainnet
 
 Geth can be used to connect to a public network, there are multiple different network IDs, the main
 
-![geth--mainnet](https://user-images.githubusercontent.com/65584733/182726770-501dba1b-be37-404f-b7a8-7524ec9f179f.png)
+![geth--mainnet](https://user-images.githubusercontent.com/65584733/182727608-903f27a5-dbdc-47d2-ac9c-1b82d6b47951.png)
 
 #### IV. `Hello World`
 
