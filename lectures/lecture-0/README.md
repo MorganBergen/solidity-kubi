@@ -103,12 +103,6 @@ Implementation of Ethereum nodes and clients is available in multiple languages,
 
 Geth is the Go implementation which acts as an Ethereum client to connect to public and test networks, but also used to create the mining and EVM (transaction nodes) for private networks. Geth is a CLI tool written in Go and used for creating a node and miners on a private chain. This lecture will provide how to install Geth on macOS.
 
-<!-- <img src="https://github.com/MorganBergen/learn-solidity-kubi/blob/main/lectures/assets/brew-install.png"> -->
-
-<!-- <img align="left" width=10% src="/lectures/assets/KU-Blockchain-logo.svg"> -->
-
-<img src="/MorganBergen/learn-solidity-kubi/blob/main/lectures/assets/brew-install.png">
-
 ![brew-install](https://user-images.githubusercontent.com/65584733/182721269-b6d5353c-8239-4509-ba79-ee69fd1cc528.png)
 
 
