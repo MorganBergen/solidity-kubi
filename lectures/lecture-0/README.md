@@ -65,25 +65,43 @@ Ethereum is an open source platform for building and deploying dApps (distrubute
 3.  Public
 
 **Main Network**
+
 The main Ethereum network is a global public network that anyone can use. It can be accessed using an account, and anyone can deploy their solutions and smart contacts. Deploying and using this main network incurs a cost in terms of gas. The main netwrok is a public chain that is accesible over the internet and anyone can connect to it and acces both data and transactions stored in it.
 
-**Test Network**
+**Testnets**
 
-Test networks are intended to help with oboarding adoption of Ethereum blockchains and testing facilities on this chain. This network has a different ledger and storage than the main network and us completely free of cost. This is because test ethers can be generated using faucets and used on these networks. There are multiple different test networks,
+Testnets (known as Test networks) are intended to help with oboarding adoption of Ethereum blockchains and testing facilities on this chain. This network has a different ledger and storage than the main network and us completely free of cost. This is because test ethers can be generated using faucets and used on these networks. There are multiple different test networks,
 
-**1. Ropsten**
+[**1. Ropsten**](https://ropsten.etherscan.io)
 
-Originally named **Morden** this is the the most widely used test networks that uses PoW (Proof of Work) consensus methods for generating blocks. This network can be used with the `--testnet` option available in Geth.
+Originally named **Morden** this is the the most widely used test networks that uses PoW (Proof of Work) consensus methods for generating blocks. This network can be used with the `--testnet` option available in Geth. (more on using this network in the following sections)
 
-**2. Rinkeby**
+[**2. Rinkeby**](https://www.rinkeby.io/#stats)
 
-**3. Kovan**
+Another Ethereum-based test network that uses PoA (Proof of Authority) consensus methods.
 
-**4. Goerli**
+[**3. Kovan Testnet**](https://kovan-testnet.github.io/website/)
+
+Kovan test networks can only be used by parity clients and hence won't be discussed or used in this book.
+Kovan another PoA (Proof of Authority) publicly accessible network; created and maintained by a consortium of Ethereum developers, this network can only be used by parity clients and therefore will not be utilized or discussed later on.
+
+[**4. Goerli**](https://goerli.net)
+
+Goerli is the last PoA consensus method based test network, this too is a cross client network and will not be utilized or discussed later on.
 
 **Private Network**
 
+A private network is created and hosted on private infrastructure. Private networks are controlled by a single organization, and it has full control over it. There are solutions, contracts, and use cases that an organization might not want to put on a public network, even for test purposes. They may want to use private chains for development, testing, and production environments. Organizations should create and host a private network, and they will have full control over it. Further in this chapter, we will see how to create your own private network.
+
 **Consortium Network**
+
+Lastly a consortium network is a private network but the network comprises of onodes that are managed by different organizations. No organization has total control over the data and chain, however it is shared within an organization and everyone can view and modify it's current state. These networks are accessible through the internet or completely private networks requiring VPNs (Virtual private networks).
+
+### Installing and Configuring Geth
+
+Implementation of Ethereum nodes and clients is available in multiple languages, including Go, C++, Python, JavaScript, Java, and Ruby. The functionality or usability of these clients is the same across languages, and developers should choose the language implementation they are most comfortable with.
+
+Geth is the Go implementation which acts as an Ethereum client to connect to public and test networks, but also used to create the mining and EVM (transaction nodes) for private networks. Geth is a CLI tool written in Go and used for creating a node and miners on a private chain. This lecture will provide how to install Geth on macOS.
 
 #### IV. `Hello World`
 
