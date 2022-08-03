@@ -134,14 +134,23 @@ Commands, Switches, and Options for configuring Geth:
 5. Networking
 6. Debugging and logging
 
-```
-$ geth  --mainnet
-
-```
+`$ geth --mainnet`
 
 Geth can be used to connect to a public network, there are multiple different network IDs, the main
 
 ![geth--mainnet](https://user-images.githubusercontent.com/65584733/182727608-903f27a5-dbdc-47d2-ac9c-1b82d6b47951.png)
+
+#### IV. Creating a Private Network
+
+After you have installed Geth, it can be configured to run locally without connecting to any network on the internet. Every chain and network has a genesis block or first block. This block does not have a parent and emulates a head node of a linkedList data structure. This block is conventionally called the genesis block and `genesis.json` file is required to create this first block.
+
+## `genesis.json`
+
+```
+
+
+
+```
 
 #### IV. `Hello World`
 
