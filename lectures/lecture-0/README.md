@@ -102,6 +102,8 @@ Lastly a consortium network is a private network but the network comprises of on
 Implementation of Ethereum nodes and clients is available in multiple languages, including Go, C++, Python, JavaScript, Java, and Ruby. The functionality or usability of these clients is the same across languages, and developers should choose the language implementation they are most comfortable with.
 
 Geth is the Go implementation which acts as an Ethereum client to connect to public and test networks, but also used to create the mining and EVM (transaction nodes) for private networks. Geth is a CLI tool written in Go and used for creating a node and miners on a private chain. This lecture will provide how to install Geth on macOS.
+<img src="/learning-solidity-kubi/lectures/assets/brew-install.png">
+
 
 #### IV. `Hello World`
 
