@@ -148,8 +148,6 @@ After you have installed Geth, it can be configured to run locally without conne
 
 ```
 
-
-
 ```
 
 #### IV. `Hello World`

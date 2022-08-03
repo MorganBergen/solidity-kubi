@@ -1,0 +1,71 @@
+owner@morgan ~ % geth --mainnet
+INFO [08-03|17:48:12.042] Starting Geth on Ethereum mainnet... 
+INFO [08-03|17:48:12.043] Bumping default cache on mainnet         provided=1024 updated=4096
+INFO [08-03|17:48:12.045] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [08-03|17:48:12.052] Set global gas cap                       cap=50,000,000
+INFO [08-03|17:48:12.063] Allocated trie memory caches             clean=614.00MiB dirty=1024.00MiB
+INFO [08-03|17:48:12.064] Allocated cache and file handles         database=/Users/owner/Library/Ethereum/geth/chaindata cache=2.00GiB handles=5120
+INFO [08-03|17:48:12.331] Opened ancient database                  database=/Users/owner/Library/Ethereum/geth/chaindata/ancient readonly=false
+INFO [08-03|17:48:12.333] Writing custom genesis block 
+INFO [08-03|17:48:12.464] Persisted trie from memory database      nodes=12356 size=1.78MiB time=21.911041ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [08-03|17:48:12.478]  
+INFO [08-03|17:48:12.478] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [08-03|17:48:12.478] Chain ID:  1 (mainnet) 
+INFO [08-03|17:48:12.478] Consensus: Ethash (proof-of-work) 
+INFO [08-03|17:48:12.478]  
+INFO [08-03|17:48:12.478] Pre-Merge hard forks: 
+INFO [08-03|17:48:12.479]  - Homestead:                   1150000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md) 
+INFO [08-03|17:48:12.479]  - DAO Fork:                    1920000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/dao-fork.md) 
+INFO [08-03|17:48:12.479]  - Tangerine Whistle (EIP 150): 2463000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md) 
+INFO [08-03|17:48:12.479]  - Spurious Dragon/1 (EIP 155): 2675000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [08-03|17:48:12.479]  - Spurious Dragon/2 (EIP 158): 2675000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [08-03|17:48:12.479]  - Byzantium:                   4370000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md) 
+INFO [08-03|17:48:12.479]  - Constantinople:              7280000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md) 
+INFO [08-03|17:48:12.479]  - Petersburg:                  7280000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md) 
+INFO [08-03|17:48:12.479]  - Istanbul:                    9069000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md) 
+INFO [08-03|17:48:12.479]  - Muir Glacier:                9200000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/muir-glacier.md) 
+INFO [08-03|17:48:12.479]  - Berlin:                      12244000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md) 
+INFO [08-03|17:48:12.479]  - London:                      12965000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md) 
+INFO [08-03|17:48:12.479]  - Arrow Glacier:               13773000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/arrow-glacier.md) 
+INFO [08-03|17:48:12.479]  - Gray Glacier:                15050000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/gray-glacier.md) 
+INFO [08-03|17:48:12.479]  
+INFO [08-03|17:48:12.479] The Merge is not yet available for this network! 
+INFO [08-03|17:48:12.479]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md) 
+INFO [08-03|17:48:12.479] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [08-03|17:48:12.479]  
+INFO [08-03|17:48:12.479] Disk storage enabled for ethash caches   dir=/Users/owner/Library/Ethereum/geth/ethash count=3
+INFO [08-03|17:48:12.479] Disk storage enabled for ethash DAGs     dir=/Users/owner/Library/Ethash count=2
+INFO [08-03|17:48:12.480] Initialising Ethereum protocol           network=1 dbversion=<nil>
+INFO [08-03|17:48:12.480] Loaded most recent local header          number=0 hash=d4e567..cb8fa3 td=17,179,869,184 age=53y4mo1w
+INFO [08-03|17:48:12.481] Loaded most recent local full block      number=0 hash=d4e567..cb8fa3 td=17,179,869,184 age=53y4mo1w
+INFO [08-03|17:48:12.481] Loaded most recent local fast block      number=0 hash=d4e567..cb8fa3 td=17,179,869,184 age=53y4mo1w
+WARN [08-03|17:48:12.481] Failed to load snapshot, regenerating    err="missing or corrupted snapshot"
+INFO [08-03|17:48:12.481] Rebuilding state snapshot 
+INFO [08-03|17:48:12.482] Resuming state snapshot generation       root=d7f897..0f0544 accounts=0 slots=0 storage=0.00B dangling=0 elapsed="573.834µs"
+INFO [08-03|17:48:12.482] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [08-03|17:48:12.484] Gasprice oracle is ignoring threshold set threshold=2
+WARN [08-03|17:48:12.485] Error reading unclean shutdown markers   error="leveldb: not found"
+WARN [08-03|17:48:12.486] Engine API enabled                       protocol=eth
+WARN [08-03|17:48:12.486] Engine API started but chain not configured for merge yet 
+INFO [08-03|17:48:12.486] Starting peer-to-peer node               instance=Geth/v1.10.21-stable/darwin-amd64/go1.18.4
+INFO [08-03|17:48:12.594] Generated state snapshot                 accounts=8893 slots=0 storage=409.64KiB dangling=0 elapsed=113.256ms
+INFO [08-03|17:48:12.615] New local node record                    seq=1,659,566,892,614 id=c7ab56222f8f8a0c ip=127.0.0.1 udp=30303 tcp=30303
+INFO [08-03|17:48:12.618] Started P2P networking                   self=enode://67ad6f63b432a5c8d49ad77f20d0bd4fd5178fcedc889f2fb4cc5bf5695d939478363f4173e89a9f3e2ecc6e5524ffb3ec575dd7376288b935e06891fdbce5d1@127.0.0.1:30303
+INFO [08-03|17:48:12.619] IPC endpoint opened                      url=/Users/owner/Library/Ethereum/geth.ipc
+INFO [08-03|17:48:12.619] Generated JWT secret                     path=/Users/owner/Library/Ethereum/geth/jwtsecret
+INFO [08-03|17:48:12.623] WebSocket enabled                        url=ws://127.0.0.1:8551
+INFO [08-03|17:48:12.623] HTTP server started                      endpoint=127.0.0.1:8551 auth=true prefix= cors=localhost vhosts=localhost
+INFO [08-03|17:48:15.266] New local node record                    seq=1,659,566,892,615 id=c7ab56222f8f8a0c ip=99.191.69.51 udp=30303 tcp=30303
+INFO [08-03|17:48:23.074] Looking for peers                        peercount=0 tried=28 static=0
+^CINFO [08-03|17:48:30.707] Got interrupt, shutting down... 
+WARN [08-03|17:48:30.712] HTTP server graceful shutdown timed out 
+INFO [08-03|17:48:30.712] HTTP server stopped                      endpoint=127.0.0.1:8551
+INFO [08-03|17:48:30.713] IPC endpoint closed                      url=/Users/owner/Library/Ethereum/geth.ipc
+INFO [08-03|17:48:30.762] Ethereum protocol stopped 
+INFO [08-03|17:48:30.763] Transaction pool stopped 
+INFO [08-03|17:48:30.768] Writing snapshot state to disk           root=d7f897..0f0544
+INFO [08-03|17:48:30.768] Persisted trie from memory database      nodes=0     size=0.00B   time="8.583µs"   gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [08-03|17:48:30.769] Writing clean trie cache to disk         path=/Users/owner/Library/Ethereum/geth/triecache threads=8
+INFO [08-03|17:48:30.785] Persisted the clean trie cache           path=/Users/owner/Library/Ethereum/geth/triecache elapsed=16.739ms
+INFO [08-03|17:48:30.785] Blockchain stopped 
+^CWARN [08-03|17:48:32.289] Already shutting down, interrupt more to panic. times=9
