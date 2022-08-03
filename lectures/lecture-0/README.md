@@ -6,11 +6,7 @@
 
 Morgan Bergen, B.S. Computer Science - Director of Education
 
----
-
 By the end of this lecture you will be able to build and deploy your first `HelloWorld.sol` program. Blocks of
-
----
 
 #### I. Technical Requirements
 
