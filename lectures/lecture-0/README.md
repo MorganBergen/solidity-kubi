@@ -27,12 +27,11 @@ Ethereum-based blockchain programs can be deployed to multiple public networks, 
     web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
 
 5.  [**node.js**](https://nodejs.org/en/) is an open-source, cross-platform, JavaScript runtime environment.
-
-    ```
-    `$ brew install node`
-    ```
-
     CLI install method homebrew
+
+    ```
+    $ brew install node
+    ```
 
 6.  [Ganache v7.0.3](https://github.com/trufflesuite/ganache.git)
 
