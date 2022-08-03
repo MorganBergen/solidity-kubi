@@ -109,6 +109,9 @@ Geth is the Go implementation which acts as an Ethereum client to connect to pub
 
 <img src="/MorganBergen/learn-solidity-kubi/blob/main/lectures/assets/brew-install.png">
 
+![brew-install](https://user-images.githubusercontent.com/65584733/182721269-b6d5353c-8239-4509-ba79-ee69fd1cc528.png)
+
+
 #### IV. `Hello World`
 
 - Ethereum network
