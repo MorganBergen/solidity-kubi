@@ -46,6 +46,8 @@ Ethereum-based blockchain programs can be deployed to multiple public networks, 
 
 6.  [Ganache v7.0.3](https://github.com/trufflesuite/ganache.git) is a Personal blockchain for Ethereum development CLI install method with homebrew `$ brew install --cask ganache`
 
+7.  [Geth](https://geth.ethereum.org/downloads/) is the Golang implementation of the Ethereum protocol. It is fast, open source software that is actively maintained.
+
 #### II. Overview of Solidity
 
 Solidity is an object-oriented contract-oriented language designed to compile code for the Ethereum Virtual Machine.
@@ -110,6 +112,35 @@ https://user-images.githubusercontent.com/65584733/182721343-878654ff-b494-4f3e-
 Just typing `Geth` and executing it will connect Geth to a public main network, and it will start syncing and downloading all of the blocks and transactions from the Ethereum blockchain. Currently the chain has over 5 TeraBytes of data and at the time of writing this it is growing each and everyday. The `help` command shows all of the commands and options with `Geth`.
 
 Geth is based on the JSON-RPC protocol. It defines the specification for remote procedure calls, with payload encoded in the JSON format.Geth allows connectivity to JSON-RPC using the following three different protocols.
+
+**IPC**
+
+Inter-Process Communication: This protocol is used for inter-process communication within the same computer.
+
+**RPC**
+
+Remote Procedure Calls: This protocol is used for inter-process communication across computers. This is generally based on TCP & HTTP protocols.
+
+**WS**
+
+WebSockets:This protocol is used to connect Geth using sockets over HTTPS.
+
+Commands, Switches, and Options for configuring Geth:
+
+1. Configuring the IPC, RPC, WS protocols.
+2. Configuring network types to connect - private, Ropsten, and Rinkeby
+3. Mining options
+4. Console and API
+5. Networking
+6. Debugging and logging
+
+```
+$ geth  --mainnet
+
+```
+
+Geth can be used to connect to a public network, there are multiple different network IDs 
+
 
 #### IV. `Hello World`
 
