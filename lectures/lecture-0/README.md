@@ -68,14 +68,7 @@ Ethereum is an open source platform for building and deploying dApps (distrubute
 
 **Main Network**
 
-The main Ethereum network is a global public network that anyone can use. It can be accessed using an account, and anyone can deploy their solutions and smart contacts. Deploying and using this main network incurs a cost in terms of gas. The main netwrok is a public chain that is accesible over the internet and anyone can connect to it and acces both data and transactions stored in it. More on installing geth in the following section.
-
-```
-$ geth  --mainnet
-
-```
-
-![geth--mainnet](https://user-images.githubusercontent.com/65584733/182726770-501dba1b-be37-404f-b7a8-7524ec9f179f.png)
+The main Ethereum network is a global public network that anyone can use. It can be accessed using an account, and anyone can deploy their solutions and smart contacts. Deploying and using this main network incurs a cost in terms of gas. The main netwrok is a public chain that is accesible over the internet and anyone can connect to it and acces both data and transactions stored in it.
 
 **Testnets**
 
@@ -141,7 +134,14 @@ Commands, Switches, and Options for configuring Geth:
 5. Networking
 6. Debugging and logging
 
+```
+$ geth  --mainnet
+
+```
+
 Geth can be used to connect to a public network, there are multiple different network IDs, the main
+
+![geth--mainnet](https://user-images.githubusercontent.com/65584733/182726770-501dba1b-be37-404f-b7a8-7524ec9f179f.png)
 
 #### IV. `Hello World`
 
