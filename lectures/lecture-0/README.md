@@ -22,9 +22,7 @@ Ethereum-based blockchain programs can be deployed to multiple public networks, 
 
 3.  [Solidity compiler 0.18.13](https://github.com/PacktPublishing/Solidity-Programming-Essentials-Second-Edition.git)
 
-4.  [web3.js v1.5.3](https://web3js.readthedocs.io/en/v1.7.5/)
-
-    web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
+4.  [web3.js v1.5.3](https://web3js.readthedocs.io/en/v1.7.5/) is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
 
 5.  [node.js](https://nodejs.org/en/) is an open-source, cross-platform, JavaScript runtime environment.
     CLI install method homebrew
