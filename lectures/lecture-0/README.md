@@ -105,7 +105,7 @@ Geth is the Go implementation which acts as an Ethereum client to connect to pub
 
 https://user-images.githubusercontent.com/65584733/182721343-878654ff-b494-4f3e-8f2a-0463456655b3.mov
 
-## :warning: **`$ Geth`**
+## :warning: WARNING USING **`$ Geth`** COMMAND
 
 Just typing `Geth` and executing it will connect Geth to a public main network, and it will start syncing and downloading all of the blocks and transactions from the Ethereum blockchain. Currently the chain has over 5 TeraBytes of data and at the time of writing this it is growing each and everyday. The `help` command shows all of the commands and options with `Geth`.
 
