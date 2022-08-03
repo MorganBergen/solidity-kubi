@@ -1,12 +1,6 @@
-<h1>
-<img usemap="#click" align="left" width=15% src="/lectures/assets/KU-Blockchain-logo.svg">
-<map name="click">
-<area href="https://kublockchain.com">
-</map>
-</h1>
+<img align="left" width=10% src="/lectures/assets/KU-Blockchain-logo.svg">
 
 # `learn solidity with KUBI`
-
 ### Introduction to solidity programming language 
 
 [ **University of Kansas Blockchain Institute** ](https://kublockchain.com) 
