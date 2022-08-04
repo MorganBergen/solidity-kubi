@@ -1,3 +1,5 @@
 Introduction to Blockchain, Ethereum, and Smart Contracts, takes you through the fundamentals of blockchain, its terminology and jargon, advantages, problems it’s trying to solve, and industry relevance. It will explain the important concepts and architecture in detail. This chapter will also teach you about concepts specific to Ethereum. In this chapter, details about its concepts like externally owned accounts, contract accounts, its currency in terms of gas and Ether will be discussed. Ethereum is heavily based on cryptography and you’ll also learn about hash, encryption, and usage of keys for creating transactions and accounts. How are transactions and accounts created, how gas is paid for each transaction, difference between message calls and transactions, and storage of code and state management will be explained in detailed.
 
 ## > :warning: **`$ Geth`**:
+
+https://ethereum.stackexchange.com/questions/17202/fatal-failed-to-write-genesis-block-wrong-genesis-block-in-database

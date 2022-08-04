@@ -186,6 +186,31 @@ The following `geth init` command initializes the node with the `genesis.json` f
 
 `-th init ./genesis.json --datadir=./`
 
+##### BREAK HERE WILL BE BACK TOMORROW I NEED HELP WITH FOLLOW ERR
+
+`Fatal: failed to write genesis block: database contains incompatible genesis`
+
+I think this is because I am working with a different version of compiler??? maybe i dont have goLang??
+
+https://ethereum.stackexchange.com/questions/17202/fatal-failed-to-write-genesis-block-wrong-genesis-block-in-database
+
+```
+owner@morgan Ethereum % ls
+genesis.json	geth		keystore
+owner@morgan Ethereum % geth init genesis.json
+INFO [08-03|19:35:44.720] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [08-03|19:35:44.726] Set global gas cap                       cap=50,000,000
+INFO [08-03|19:35:44.727] Allocated cache and file handles         database=/Users/owner/Library/Ethereum/geth/chaindata cache=16.00MiB handles=16
+INFO [08-03|19:35:47.193] Opened ancient database                  database=/Users/owner/Library/Ethereum/geth/chaindata/ancient readonly=false
+INFO [08-03|19:35:47.206] Persisted trie from memory database      nodes=0 size=0.00B time="196.417µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+Fatal: Failed to write genesis block: database contains incompatible genesis (have d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3, new bd71b8d9165ecac47d33e22558fa4bb2397e800ab47ef36b0fdbb23856c2546c)
+owner@morgan Ethereum %
+
+
+
+
+```
+
 #### IV. `Hello World`
 
 - Ethereum network
