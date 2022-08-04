@@ -142,13 +142,49 @@ Geth can be used to connect to a public network, there are multiple different ne
 
 #### IV. Creating a Private Network
 
-After you have installed Geth, it can be configured to run locally without connecting to any network on the internet. Every chain and network has a genesis block or first block. This block does not have a parent and emulates a head node of a linkedList data structure. This block is conventionally called the genesis block and `genesis.json` file is required to create this first block.
+A private network is composed of multiple Ethereum nodes that can only connect to each other. In order to run multiple nodes locally, each one requires a separate data directory (--datadir). The nodes must also know about each other and be able to exchange information, share an initial state and a common consensus algorithm. The remainder of this page will explain how to configure Geth so that these basic requirements are met, enabling a private network to be started. After you have installed Geth, it can be configured to run locally without connecting to any network on the internet. Every chain and network has a genesis block or first block. This block does not have a parent and emulates a head node of a linkedList data structure. This block is conventionally called the genesis block and `genesis.json` file is required to create this first block.
 
-## `genesis.json`
-
-```
+1. create the first/genesis block **`genesis.json`**
 
 ```
+{
+    "config" : {
+        "chainID": 999,
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0,
+        "byzantiumBlock": 0,
+        "constantinopleBlock": 0,
+        "petersburgBlock": 0,
+        "istanbulBlock": 0,
+        "ethash":{}
+    },
+    "nonce": "0x0",
+    "timestamp": "0x62272fde",
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "gasLimit": "0x47b760",
+    "difficulty": "0x0",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "alloc": {},
+    "number": "0x0",
+    "gasUsed": "0x0",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "baseFeePerGas": null
+}
+```
+
+2.  Initialize the private network
+
+    `genesis.json` file should be passed to geth to initiaze your private network. The geth node also needs to store the blockchain data and account keys. This information should also be provided to Geth while initializing the private network.
+
+3.  Command Line Input for network initialization
+
+The following `geth init` command initializes the node with the `genesis.json` file and target data directory location to store the chain data and key store information:
+
+`init Bootstrap and initialize a new genesis block`
+
+`-th init ./genesis.json --datadir=./`
 
 #### IV. `Hello World`
 
@@ -159,3 +195,7 @@ After you have installed Geth, it can be configured to run locally without conne
 - Installing the solidity compiler
 - Installing the web3 framework
 - Installing and working with MetaMask
+
+```
+
+```
