@@ -29,7 +29,18 @@ contract HelloWorld
 
 This is a programming lecture series, thus most of the work and teaching here will consist of programming and implementing programs on the Ethereum Virtual Machine. Execute the instructions, given in this lecture, will focus on deployment on a macOS machine, however you can use a machine with any operating system (Windows, Linux).
 
-Ethereum-based blockchain programs can be deployed to multiple public networks, test networks, or private networks. The following will be the Ethereum-based tools and utilities that are necessary for building our programs. The following are the required assets you need to set up your development enviroment for building testing, deploying, & interacting with solidity contracts
+Ethereum-based blockchain programs can be deployed to multiple public networks, test networks, or private networks. The following will be the Ethereum-based tools and utilities that are necessary for building our programs. The following are the required assets you need to set up your development enviroment for building testing, deploying, & interacting with solidity contracts.
+
+In order to derive the most value from this lecture series the following skills are requist:
+
+1. Experience using the command line tool
+2. Basic knowledge regarding Ethereum protocols and understanding of
+
+In order to get the most value from the tutorials on this page, the following skills are necessary:
+
+Experience using the command line
+Basic knowledge about Ethereum and testnets
+Basic knowledge about HTTP and JavaScript
 
 **What you will need for this lecture series**:
 
@@ -185,6 +196,7 @@ The following `geth init` command initializes the node with the `genesis.json` f
 `init Bootstrap and initialize a new genesis block`
 
 `-th init ./genesis.json --datadir=./`
+`geth init ./genesis.json --datadir=./`
 
 ##### BREAK HERE WILL BE BACK TOMORROW I NEED HELP WITH FOLLOW ERR
 
@@ -206,6 +218,8 @@ INFO [08-03|19:35:47.206] Persisted trie from memory database      nodes=0 size=
 Fatal: Failed to write genesis block: database contains incompatible genesis (have d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3, new bd71b8d9165ecac47d33e22558fa4bb2397e800ab47ef36b0fdbb23856c2546c)
 owner@morgan Ethereum %
 
+
+https://ethereum.stackexchange.com/questions/17202/fatal-failed-to-write-genesis-block-wrong-genesis-block-in-database
 
 
 
