@@ -6,7 +6,7 @@ Introduction to solidity programming language
 
 Morgan Bergen, B.S. Computer Science - Director of Education [University of Kansas Blockchain Institute](https://kublockchain.com)
 
-## Learning Objective
+### Learning Objective
 
 By the end of this lecture you will have set a private network of multiple Geth nodes. An ethereum network is private if the nodes are not connected to the main network. Private only means reserved or isolated, rather than protected or secure. A fully controlled, private ethereum network is useful as a backend for core developers working on issues relating to networking/blockchain syncing. Private networks are also useful for Dapp developers testing multi-block and multi-user scenarios.
 
@@ -16,7 +16,7 @@ The information provided in each block is used by Geth to update its “state”
 
 A private network is composed of multiple Ethereum nodes that can only connect to each other. In order to run multiple nodes locally, each one requires a separate data directory `--datadir`. The nodes must also know about each other and be able to exchange information, share an initial state and a common consensus algorithm.
 
-## steps
+### Overviews
 
 [step 0: configure Geth](https://github.com/MorganBergen/solidity-kubi/tree/main/lectures/lecture-01#step-0-configure-geth)
 
