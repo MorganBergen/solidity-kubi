@@ -1,4 +1,5 @@
-<img align="left" width=10% src="/lectures/assets/KU-Blockchain-logo.svg">
+<img align="left" width=10% src="/assets/KU-Blockchain-logo.svg">
+<img align="left">
 
 # `learn solidity with KUBI`
 
