@@ -1,4 +1,4 @@
-### private network
+# Creating a Private Test Network
 
 Guide to setting up a private network of multiple Geth nodes. An ethereum network is private if the nodes are not connected to the main network. Private only means reserved or isolated, rather than protected or secure. A fully controlled, private ethereum network is useful as a backend for core developers working
 on issues relating to networking/blockchain syncing. Private networks are also useful for Dapp developers testing multi-block and multi-user scenarios.
@@ -7,29 +7,30 @@ Geth is an Ethereum client written in the Go programming language. Geth turns a 
 
 The information provided in each block is used by Geth to update its “state” - the ether balance of each account on Ethereum. There are two types of account: externally-owned accounts (EOAs) and contract accounts. Contract accounts execute contract code when they receive transactions. EOAs are accounts that users manage locally in order to sign and submit transactions. Each EOA is a public-private key pair, where the public key is used to derive a unique address for the user and the private key is used to protect the account and securely sign messages. Therefore, in order to use Ethereum, it is first necessary to generate an EOA (hereafter, “account”). This tutorial will guide the user through creating an account, funding it with ether and sending some to another address.
 
-# Step 0: geth account command `geth account`
+## Step 0: geth account command `geth account`
 
-## figure-1.0.png
+### figure-1.0.png
 
-```
+```console
 owner@morgan Ethereum % geth account -help
 ```
 
-1. `geth account` :
+1.  NAME:
 
-```
+```console
 geth account - Manage accounts
-```
-
-2. `geth account` USAGE:
 
 ```
+
+2.  USAGE:
+
+```console
 geth account command [command options] [arguments...]
 ```
 
-3. `geth account` COMMANDS:
+3.  COMMANDS:
 
-```
+```console
 
     list    Print summary of existing accounts
     new     Create a new account
@@ -39,32 +40,22 @@ geth account command [command options] [arguments...]
 
 ```
 
-4. `geth account` DESCRIPTION:
+4.  DESCRIPTION:
 
 - Manage accounts
 - List all existing accounts
 - Imports a private key into a new account
 - Create a new account or update an existing account
 
-The `geth account` command supports an interactive mode, when you are prompted for password as well as non-interactive mode where passwords are supplied via a given password file. Non-interactive mode is only meant for scripted use on test networks or known safe enviroments. Make sure you remember the password you gave when creating a new account (eith either new or import). Without it you are not able to unlock your account.
+The `geth account` command supports an interactive mode, when you are prompted for password as well as non-interactive mode where passwords are supplied via a given password file. Non-interactive mode is only meant for scripted use on test networks or known safe enviroments. Make sure you remember the password you gave when creating a new account (eith either new or import). Without it you are not able to unlock your account. Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly. It is safe to transfer the enire directory of the individual keys therein between ethereum nodes by simply coping.
 
-Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly. It is safe to transfer the enire directory of the individual keys therein between ethereum nodes by simply coping.
-
-# Step 1: generating accounts
+## Step 1: generating accounts
 
 ## figure-1.1.png
 
 ```console
-foo@bar:~$ whoami
-foo
-
 owner@morgan Ethereum % geth account -help
-
-```
-
-```cli
-owner@morgan Ethereum % geth account -help
-```
+``
 
 To generate a new account in Geth.
 
@@ -171,6 +162,8 @@ owner@morgan Ethereum %
 - Installing the solidity compiler
 - Installing the web3 framework
 - Installing and working with MetaMask
+
+```
 
 ```
 
