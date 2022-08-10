@@ -18,11 +18,11 @@ A private network is composed of multiple Ethereum nodes that can only connect t
 
 ## steps
 
-[step 0: configuring Geth](https://github.com/MorganBergen/solidity-kubi/tree/main/lectures/lecture-01#step-0-configure-geth)
+[step 0: configure Geth](https://github.com/MorganBergen/solidity-kubi/tree/main/lectures/lecture-01#step-0-configure-geth)
 
 [step 1: generating accounts](https://github.com/MorganBergen/solidity-kubi/tree/main/lectures/lecture-01#step-1-generating-accounts)
 
-## Step 0: configure Geth
+## step 0: configure Geth
 
 Step 0 will explored the various options for configuring a local private network. This step will show how to set up and launch a private network, unlock the associated accounts, attach a console to check the network status and make some basic interactions.
 
@@ -42,6 +42,63 @@ Step 0 will explored the various options for configuring a local private network
 **Following Steps:**
 
 1. Choose a Network ID
+
+Ethereum Mainnet has it's network ID = 1. There are many other networks that Geth can connect to by providing alternative Chain IDs, some are testnets and others are alternative networks built from forks of the Geth source code. Providing a network ID that is not already being used by an existing network or testnet means the nodes using that network ID can only connect to each other, creating a private network. A list of current network IDs is available at [chainlist.org](https://chainlist.org). The network ID is controlled using then networkid flag. insert -> figure-1.1.png & figure-1.2.png
+
+```console
+owner@morgan Ethereum % geth --networkid 12345
+INFO [08-10|12:29:23.572] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [08-10|12:29:23.576] Set global gas cap                       cap=50,000,000
+INFO [08-10|12:29:23.578] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [08-10|12:29:23.578] Allocated cache and file handles         database=/Users/owner/Library/Ethereum/geth/chaindata cache=512.00MiB handles=5120
+INFO [08-10|12:29:23.949] Opened ancient database                  database=/Users/owner/Library/Ethereum/geth/chaindata/ancient readonly=false
+INFO [08-10|12:29:23.965]
+INFO [08-10|12:29:23.966] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [08-10|12:29:23.966] Chain ID:  1 (mainnet)
+INFO [08-10|12:29:23.966] Consensus: Ethash (proof-of-work)
+INFO [08-10|12:29:23.966]
+INFO [08-10|12:29:23.966] Pre-Merge hard forks:
+INFO [08-10|12:29:23.966]  - Homestead:                   1150000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md)
+INFO [08-10|12:29:23.966]  - DAO Fork:                    1920000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/dao-fork.md)
+INFO [08-10|12:29:23.966]  - Tangerine Whistle (EIP 150): 2463000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md)
+INFO [08-10|12:29:23.966]  - Spurious Dragon/1 (EIP 155): 2675000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
+INFO [08-10|12:29:23.966]  - Spurious Dragon/2 (EIP 158): 2675000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
+INFO [08-10|12:29:23.966]  - Byzantium:                   4370000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md)
+INFO [08-10|12:29:23.966]  - Constantinople:              7280000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md)
+INFO [08-10|12:29:23.966]  - Petersburg:                  7280000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md)
+INFO [08-10|12:29:23.966]  - Istanbul:                    9069000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md)
+INFO [08-10|12:29:23.966]  - Muir Glacier:                9200000  (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/muir-glacier.md)
+INFO [08-10|12:29:23.966]  - Berlin:                      12244000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md)
+INFO [08-10|12:29:23.966]  - London:                      12965000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
+INFO [08-10|12:29:23.966]  - Arrow Glacier:               13773000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/arrow-glacier.md)
+INFO [08-10|12:29:23.966]  - Gray Glacier:                15050000 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/gray-glacier.md)
+INFO [08-10|12:29:23.966]
+INFO [08-10|12:29:23.966] The Merge is not yet available for this network!
+INFO [08-10|12:29:23.966]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+INFO [08-10|12:29:23.966] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [08-10|12:29:23.966]
+INFO [08-10|12:29:23.968] Disk storage enabled for ethash caches   dir=/Users/owner/Library/Ethereum/geth/ethash count=3
+INFO [08-10|12:29:23.968] Disk storage enabled for ethash DAGs     dir=/Users/owner/Library/Ethash count=2
+INFO [08-10|12:29:23.969] Initialising Ethereum protocol           network=12345 dbversion=8
+INFO [08-10|12:29:23.970] Loaded most recent local header          number=14463 hash=0f5a32..a0ad66 td=5,554,539,276,154,302 age=7y1mo2w
+INFO [08-10|12:29:23.971] Loaded most recent local full block      number=0     hash=d4e567..cb8fa3 td=17,179,869,184        age=53y4mo2w
+INFO [08-10|12:29:23.971] Loaded most recent local fast block      number=14463 hash=0f5a32..a0ad66 td=5,554,539,276,154,302 age=7y1mo2w
+INFO [08-10|12:29:23.971] Loaded last fast-sync pivot marker       number=15,272,588
+WARN [08-10|12:29:23.971] Snapshot maintenance disabled (syncing)
+INFO [08-10|12:29:23.972] Loaded local transaction journal         transactions=0 dropped=0
+INFO [08-10|12:29:23.972] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [08-10|12:29:23.972] Upgrading chain index                    type=bloombits percentage=0
+INFO [08-10|12:29:23.973] Gasprice oracle is ignoring threshold set threshold=2
+WARN [08-10|12:29:23.976] Unclean shutdown detected                booted=2022-08-10T12:28:12-0500 age=1m11s
+WARN [08-10|12:29:23.977] Unclean shutdown detected                booted=2022-08-10T12:28:21-0500 age=1m2s
+WARN [08-10|12:29:23.977] Unclean shutdown detected                booted=2022-08-10T12:29:22-0500 age=1s
+WARN [08-10|12:29:23.977] Engine API enabled                       protocol=eth
+WARN [08-10|12:29:23.977] Engine API started but chain not configured for merge yet
+ERROR[08-10|12:29:24.016] Section processing failed                type=bloombits error="canonical block #1991 unknown"
+Fatal: Database has receipts with a legacy format. Please run `geth db freezer-migrate`.
+
+```
+
 2. Choose a Consensus Algorithm
 3. Creating the Genesis Block
 4. Initializing the Geth Database
@@ -52,7 +109,7 @@ Step 0 will explored the various options for configuring a local private network
 9. Running A Miner (Ethash)
 10. End-to-end Example
 
-## Step 1: generating accounts
+## step 1: generating accounts
 
 ```console
 
@@ -133,16 +190,7 @@ OPTIONS:
 
 5.  DESCRIPTION:
 
-- Manage accounts
-- List all existing accounts
-- Imports a private key into a new account
-- Create a new account or update an existing account
-
-The `geth account` command supports an interactive mode, when you are prompted for password as well as non-interactive mode where passwords are supplied via a given password file. Non-interactive mode is only meant for scripted use on test networks or known safe enviroments. Make sure you remember the password you gave when creating a new account (eith either new or import). Without it you are not able to unlock your account. Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly. It is safe to transfer the enire directory of the individual keys therein between ethereum nodes by simply coping. figure-1.0.png
-
-```console
-owner@morgan Ethereum % geth account -help
-``
+Geth account will manage accounts, list all existing accounts, import a private key into a new account, and create a new account or update an existing account The `geth account` command supports an interactive mode, when you are prompted for password as well as non-interactive mode where passwords are supplied via a given password file. Non-interactive mode is only meant for scripted use on test networks or known safe enviroments. Make sure you remember the password you gave when creating a new account (eith either new or import). Without it you are not able to unlock your account. Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly. It is safe to transfer the enire directory of the individual keys therein between ethereum nodes by simply coping. figure-1.0.png
 
 To generate a new account in Geth.
 
@@ -249,6 +297,8 @@ owner@morgan Ethereum %
 - Installing the solidity compiler
 - Installing the web3 framework
 - Installing and working with MetaMask
+
+```
 
 ```
 
