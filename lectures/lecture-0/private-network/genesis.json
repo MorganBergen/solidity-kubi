@@ -1,28 +1,25 @@
 {
-    "config": {
+    "config" : {
         "chainID": 999,
         "homesteadBlock": 0,
-        "eip150Block": 0,
         "eip155Block": 0,
         "eip158Block": 0,
         "byzantiumBlock": 0,
         "constantinopleBlock": 0,
         "petersburgBlock": 0,
         "istanbulBlock": 0,
-        "ethash": {}
+        "ethash":{}
     },
     "nonce": "0x0",
     "timestamp": "0x62272fde",
     "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "gasLimit": "0x47b760",
-    "difficulty": "0x80000",
+    "difficulty": "0x0",
     "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "coinbase": "0x0000000000000000000000000000000000000000",
-    "alloc": { },
+    "alloc": {},
     "number": "0x0",
     "gasUsed": "0x0",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "baseFeePerGas": null
 }
-
-

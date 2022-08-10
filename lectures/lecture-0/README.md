@@ -151,7 +151,7 @@ Geth can be used to connect to a public network, there are multiple different ne
 
 ![geth--mainnet](https://user-images.githubusercontent.com/65584733/182727608-903f27a5-dbdc-47d2-ac9c-1b82d6b47951.png)
 
-#### IV. Creating a Private Network
+#### IV. Creating a Private Test Network
 
 A private network is composed of multiple Ethereum nodes that can only connect to each other. In order to run multiple nodes locally, each one requires a separate data directory (--datadir). The nodes must also know about each other and be able to exchange information, share an initial state and a common consensus algorithm. The remainder of this page will explain how to configure Geth so that these basic requirements are met, enabling a private network to be started. After you have installed Geth, it can be configured to run locally without connecting to any network on the internet. Every chain and network has a genesis block or first block. This block does not have a parent and emulates a head node of a linkedList data structure. This block is conventionally called the genesis block and `genesis.json` file is required to create this first block.
 
@@ -202,8 +202,6 @@ The following `geth init` command initializes the node with the `genesis.json` f
 
 `Fatal: failed to write genesis block: database contains incompatible genesis`
 
-I think this is because I am working with a different version of compiler??? maybe i dont have goLang??
-
 https://ethereum.stackexchange.com/questions/17202/fatal-failed-to-write-genesis-block-wrong-genesis-block-in-database
 
 ```
@@ -218,12 +216,9 @@ INFO [08-03|19:35:47.206] Persisted trie from memory database      nodes=0 size=
 Fatal: Failed to write genesis block: database contains incompatible genesis (have d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3, new bd71b8d9165ecac47d33e22558fa4bb2397e800ab47ef36b0fdbb23856c2546c)
 owner@morgan Ethereum %
 
-
-https://ethereum.stackexchange.com/questions/17202/fatal-failed-to-write-genesis-block-wrong-genesis-block-in-database
-
-
-
 ```
+
+#### IV. Creating a Private Test Network
 
 #### IV. `Hello World`
 
