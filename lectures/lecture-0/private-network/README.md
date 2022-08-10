@@ -1,5 +1,3 @@
-![geth](https://geth.ethereum.org/docs/getting-started)
-
 ### private network
 
 Guide to setting up a private network of multiple Geth nodes. An ethereum network is private if the nodes are not connected to the main network. Private only means reserved or isolated, rather than protected or secure. A fully controlled, private ethereum network is useful as a backend for core developers working
