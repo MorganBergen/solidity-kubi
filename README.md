@@ -10,6 +10,8 @@ Morgan Bergen, B.S. Computer Science - Director of Education
 
 A ten part lecture series on the introduction to Blockchain, Ethereum, and Smart Contracts. This repo will take you through how to build application on the ethereum blockchain, its terminology and jargon, advantages, problems it’s trying to solve, and industry relevance. This lecture series will explain the important concepts of solidity and it's architecture in detail.
 
+Details regarding solidity concepts like externally owned accounts, contract accounts, its currency in terms of gas and Ether will be discussed. Ethereum is heavily based on cryptography and you’ll also learn about hash, encryption, and usage of keys for creating transactions and accounts. How are transactions and accounts created, how gas is paid for each transaction, difference between message calls and transactions, and storage of code and state management will be explained in detailed.
+
 # directory tree
 
 ```
@@ -20,17 +22,17 @@ A ten part lecture series on the introduction to Blockchain, Ethereum, and Smart
 ├── lectures
 │   │
 │   ├── lecture-0
-│   │   └── README.md               # introduction to course
+│   │   └── README.md               # introduction, enviroment configuration
 │   │       │
-│   │       ├── layout.css
-│   │       ├── layout.js
-│   │       └── seo.js
+│   │       ├── geth-help.txt       # console output preview
+│   │       ├── geth--mainnet.txt   # console output preview
+│   │       └── ...
 │   │
 │   └── lecture-1
-│       │
-│       ├── 404.js
-│       ├── index.js
-│       └── page-2.js
+│       └── README.md               # private network set up
+│       ├──
+│       ├──
+│       └──
 │
 ├── assets
 │   └── figures
