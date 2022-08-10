@@ -38,27 +38,32 @@ Step 0 will explored the various options for configuring a local private network
 9.  Running A Miner (Ethash)
 10. End-to-end Example
 
-**Following Steps:**
-
-1. Choose a Network ID
+### 1. Choose a Network ID
 
 Ethereum Mainnet has it's network ID = 1. There are many other networks that Geth can connect to by providing alternative Chain IDs, some are testnets and others are alternative networks built from forks of the Geth source code. Providing a network ID that is not already being used by an existing network or testnet means the nodes using that network ID can only connect to each other, creating a private network. A list of current network IDs is available at [chainlist.org](https://chainlist.org). The network ID is controlled using then networkid flag. insert -> figure-1.1.png & figure-1.2.png
 
 <img src="https://github.com/MorganBergen/solidity-kubi/blob/main/lectures/lecture-01/figures/figure-1.1.png">
 <img src="https://github.com/MorganBergen/solidity-kubi/blob/main/lectures/lecture-01/figures/figure-1.2.png">
 
-2. Choose a Consensus Algorithm
+### 2. Choose a Consensus Algorithm
 
 While the mainnetwork uses proof-of-work (PoW) to secure the blockchain, Geth also supports the 'Clique' proof-of-authority (PoA) consensus algorithm as an alternative for private networks. CLique is stronly remco
 
-3. Creating the Genesis Block
-4. Initializing the Geth Database
-5. Scheduling Hard Forks
-6. Setting up Networking
-7. Running member Nodes
-8. Running A Signer (Clique)
-9. Running A Miner (Ethash)
-10. End-to-end Example
+### 3. Creating the Genesis Block
+
+### 4. Initializing the Geth Database
+
+### 5. Scheduling Hard Forks
+
+### 6. Setting up Networking
+
+### 7. Running member Nodes
+
+### 8. Running A Signer (Clique)
+
+### 9. Running A Miner (Ethash)
+
+### 10. End-to-end Example
 
 ## step 1: generating accounts
 
