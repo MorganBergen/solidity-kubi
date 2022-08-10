@@ -10,10 +10,31 @@ A private network is composed of multiple Ethereum nodes that can only connect t
 
 ## Step 0: configure Geth
 
+Step 0 will explored the various options for configuring a local private network. This step will show how to set up and launch a private network, unlock the associated accounts, attach a console to check the network status and make some basic interactions.
+
+**Learning Objectives:**
+
 1.  Choose a Network ID
 2.  Choose a Consensus Algorithm
 3.  Creating the Genesis Block
-4.
+4.  Initializing the Geth Database
+5.  Scheduling Hard Forks
+6.  Setting up Networking
+7.  Running member Nodes
+8.  Running A Signer (Clique)
+9.  Running A Miner (Ethash)
+10. End-to-end Example
+
+11. Choose a Network ID
+12. Choose a Consensus Algorithm
+13. Creating the Genesis Block
+14. Initializing the Geth Database
+15. Scheduling Hard Forks
+16. Setting up Networking
+17. Running member Nodes
+18. Running A Signer (Clique)
+19. Running A Miner (Ethash)
+20. End-to-end Example
 
 ## Step 1: `geth account`
 
