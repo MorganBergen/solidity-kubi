@@ -46,7 +46,7 @@ Ethereum Mainnet has it's network ID = 1. There are many other networks that Get
 
 ![figure 1.1](https://github.com/MorganBergen/solidity-kubi/blob/tree/main/lectures/lecture-01/figures/figure1.1.png?raw=true)
 
-<img src="https://github.com/MorganBergen/solidity-kubi/blob/tree/main/lectures/lecture-01/figures/figure1.1.png"
+<img src="https://github.com/MorganBergen/solidity-kubi/blob/tree/main/lectures/lecture-01/figures/figure1.1.png">
 
 2. Choose a Consensus Algorithm
 
