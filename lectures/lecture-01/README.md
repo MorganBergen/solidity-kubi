@@ -21,9 +21,9 @@ A private network is composed of multiple Ethereum nodes that can only connect t
 
 [step 1: generating accounts](https://github.com/MorganBergen/solidity-kubi/tree/main/lectures/lecture-01#step-1-generating-accounts)
 
-## step 0: configure Geth
+# step 0: configure Geth
 
-Step 0 will explored the various options for configuring a local private network. This step will show how to set up and launch a private network, unlock the associated accounts, attach a console to check the network status and make some basic interactions.
+We will explore the various options for configuring a local private network. This step will show how to set up and launch a private network, unlock the associated accounts, attach a console to check the network status and make some basic interactions.
 
 **Learning Objectives:**
 
