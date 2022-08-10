@@ -2,7 +2,7 @@
 
 # `learn solidity with KUBI`
 
-### introduction to solidity programming language
+## Introduction to solidity programming language
 
 [ **University of Kansas Blockchain Institute** ](https://kublockchain.com)
 
@@ -12,7 +12,7 @@ A ten part lecture series on the introduction to Blockchain, Ethereum, and Smart
 
 Details regarding solidity concepts like externally owned accounts, contract accounts, its currency in terms of gas and Ether will be discussed. Ethereum is heavily based on cryptography and you’ll also learn about hash, encryption, and usage of keys for creating transactions and accounts. How are transactions and accounts created, how gas is paid for each transaction, difference between message calls and transactions, and storage of code and state management will be explained in detailed.
 
-# directory tree
+## directory tree
 
 ```
 .
