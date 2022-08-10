@@ -17,30 +17,30 @@ A ten part lecture series on the introduction to Blockchain, Ethereum, and Smart
 ├── node_modules
 │   └── ...
 │
-├── src
+├── lectures
 │   │
-│   ├── components                # put all the re-usable elements (buttons, styles, layout)
-│   │   └── layout                # you'll find the header, footer, & layout.css
+│   ├── lecture-0
+│   │   └── README.md               # introduction to course
 │   │       │
-│   │       ├── layout.css        # where global font, links, & reset your CSS if needed
+│   │       ├── layout.css
 │   │       ├── layout.js
 │   │       └── seo.js
 │   │
-│   └── pages                     # every file here will create a new page automatically
+│   └── lecture-1
 │       │
 │       ├── 404.js
 │       ├── index.js
 │       └── page-2.js
 │
-├── static                        # to simplify the implementation of local images
-│   └── images                    # root folder, these images will automatically be included
-│       │                           in the public site using the url /images/your-image.svg
-│       ├── animations
-│       ├── avatars
-│       ├── companies
-│       ├── icons
-│       ├── logos
-│       └── waves
+├── assets
+│   └── figures
+│       │
+│       ├── figure-0.0.png
+│       ├── figure-0.1.png
+│       ├── figure-0.2.png
+│       ├── figure-0.3.png
+│       ├── figure-0.4.png
+│       └── figure-0.5.png
 │
 └── ...
 ```
