@@ -9,6 +9,8 @@ The information provided in each block is used by Geth to update its “state”
 
 # Step 0: geth account command
 
+## figure-1.0.png
+
 ```
 owner@morgan Ethereum % geth account -help
 ```
@@ -49,6 +51,20 @@ The `geth account` command supports an interactive mode, when you are prompted f
 Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly. It is safe to transfer the enire directory of the individual keys therein between ethereum nodes by simply coping.
 
 # Step 1: generating accounts
+
+## figure-1.1.png
+
+```console
+foo@bar:~$ whoami
+foo
+
+owner@morgan Ethereum % geth account -help
+
+```
+
+```cli
+owner@morgan Ethereum % geth account -help
+```
 
 To generate a new account in Geth.
 
