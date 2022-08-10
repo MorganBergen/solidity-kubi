@@ -44,6 +44,8 @@ Step 0 will explored the various options for configuring a local private network
 
 Ethereum Mainnet has it's network ID = 1. There are many other networks that Geth can connect to by providing alternative Chain IDs, some are testnets and others are alternative networks built from forks of the Geth source code. Providing a network ID that is not already being used by an existing network or testnet means the nodes using that network ID can only connect to each other, creating a private network. A list of current network IDs is available at [chainlist.org](https://chainlist.org). The network ID is controlled using then networkid flag. insert -> figure-1.1.png & figure-1.2.png
 
+![figure 1.1](https://github.com/MorganBergen/solidity-kubi/blob/tree/main/lectures/lecture-01/figures/figure1.1?raw=true)
+
 2. Choose a Consensus Algorithm
 
 While the mainnetwork uses proof-of-work (PoW) to secure the blockchain, Geth also supports the 'Clique' proof-of-authority (PoA) consensus algorithm as an alternative for private networks. CLique is stronly remco
