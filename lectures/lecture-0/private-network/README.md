@@ -1,3 +1,5 @@
+![geth](https://geth.ethereum.org/docs/getting-started)
+
 ### private network
 
 Guide to setting up a private network of multiple Geth nodes. An ethereum network is private if the nodes are not connected to the main network. Private only means reserved or isolated, rather than protected or secure. A fully controlled, private ethereum network is useful as a backend for core developers working
@@ -22,6 +24,4 @@ This will return a prompt for a password. Once provided, a new account will be c
 geth accout new --keystore geth-tutorial/keystore
 ```
 
-It is importnat
-
-![link to tutorial](https://geth.ethereum.org/docs/getting-started)
+It is important to save the account address and the password somewhere secure. They will be used again soon in further steps. Please note that the account address shown below
