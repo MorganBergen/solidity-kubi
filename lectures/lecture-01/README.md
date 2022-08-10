@@ -25,7 +25,7 @@ A private network is composed of multiple Ethereum nodes that can only connect t
 
 We will explore the various options for configuring a local private network. This step will show how to set up and launch a private network, unlock the associated accounts, attach a console to check the network status and make some basic interactions.
 
-**Learning Objectives:**
+### Learning Objectives:
 
 1.  Choose a Network ID
 2.  Choose a Consensus Algorithm
