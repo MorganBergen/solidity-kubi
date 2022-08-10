@@ -1,9 +1,8 @@
 <img align="left" width=10% src="/assets/KU-Blockchain-logo.svg">
-<img align="left">
 
 # `learn solidity with KUBI`
 
-### Introduction to solidity programming language
+### introduction to solidity programming language
 
 [ **University of Kansas Blockchain Institute** ](https://kublockchain.com)
 
