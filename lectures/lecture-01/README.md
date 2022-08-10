@@ -66,8 +66,6 @@ USAGE:
    geth account command [command options] [arguments...]
 
 DESCRIPTION:
-
-
    Manage accounts, list all existing accounts, import a private key into a new
    account, create a new account or update an existing account.
 
@@ -95,11 +93,8 @@ COMMANDS:
    help, h  Shows a list of commands or help for one command
 
 OPTIONS:
-
     --help, -h                     (default: false)
           show help
-
-owner@morgan Ethereum %
 
 ```
 
