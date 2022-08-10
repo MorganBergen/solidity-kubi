@@ -7,7 +7,7 @@ Geth is an Ethereum client written in the Go programming language. Geth turns a 
 
 The information provided in each block is used by Geth to update its “state” - the ether balance of each account on Ethereum. There are two types of account: externally-owned accounts (EOAs) and contract accounts. Contract accounts execute contract code when they receive transactions. EOAs are accounts that users manage locally in order to sign and submit transactions. Each EOA is a public-private key pair, where the public key is used to derive a unique address for the user and the private key is used to protect the account and securely sign messages. Therefore, in order to use Ethereum, it is first necessary to generate an EOA (hereafter, “account”). This tutorial will guide the user through creating an account, funding it with ether and sending some to another address.
 
-# Step 0: geth account command
+# Step 0: geth account command `geth account`
 
 ## figure-1.0.png
 
@@ -15,7 +15,7 @@ The information provided in each block is used by Geth to update its “state”
 owner@morgan Ethereum % geth account -help
 ```
 
-1. `geth account` NAME:
+1. `geth account` :
 
 ```
 geth account - Manage accounts
