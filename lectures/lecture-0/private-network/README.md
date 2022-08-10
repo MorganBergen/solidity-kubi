@@ -22,4 +22,6 @@ This will return a prompt for a password. Once provided, a new account will be c
 geth accout new --keystore geth-tutorial/keystore
 ```
 
-It is importnat 
+It is importnat
+
+![link to tutorial](https://geth.ethereum.org/docs/getting-started)
