@@ -10,8 +10,6 @@ Morgan Bergen, B.S. Computer Science - Director of Education
 
 A ten part lecture series on the introduction to Blockchain, Ethereum, and Smart Contracts. This repo will take you through how to build application on the ethereum blockchain, its terminology and jargon, advantages, problems it’s trying to solve, and industry relevance. This lecture series will explain the important concepts of solidity and it's architecture in detail.
 
-### Directory Tree
-
 # directory tree
 
 ```
