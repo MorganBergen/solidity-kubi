@@ -16,10 +16,7 @@ Details regarding solidity concepts like externally owned accounts, contract acc
 
 ```
 .
-├── node_modules
-│   └── ...
-│
-├── lectures
+└── lectures
 │   │
 │   ├── lecture-0
 │   │   └── README.md               # introduction, enviroment configuration
