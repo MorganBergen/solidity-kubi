@@ -24,7 +24,9 @@ geth accout new --keystore geth-tutorial/keystore
 
 It is important to save the account address and the password somewhere secure. They will be used again soon in further steps. Please note that the account address shown below
 
-### OLD
+# ------------------------------------------
+
+#### IV. Creating a Private Test Network
 
 A private network is composed of multiple Ethereum nodes that can only connect to each other. In order to run multiple nodes locally, each one requires a separate data directory (--datadir). The nodes must also know about each other and be able to exchange information, share an initial state and a common consensus algorithm. The remainder of this page will explain how to configure Geth so that these basic requirements are met, enabling a private network to be started. After you have installed Geth, it can be configured to run locally without connecting to any network on the internet. Every chain and network has a genesis block or first block. This block does not have a parent and emulates a head node of a linkedList data structure. This block is conventionally called the genesis block and `genesis.json` file is required to create this first block.
 

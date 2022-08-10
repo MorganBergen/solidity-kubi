@@ -67,9 +67,9 @@ Solidity is an object-oriented contract-oriented language designed to compile co
 
 The important utilities related to the Ethereum ecosystem will be provided along with Geth, which is one of the main Ethereum implementations.
 
-##### Ethereum networks
+##### Ethereum Networks
 
-Ethereum is an open source platform for building and deploying dApps (distrubuted/decentralized applications). Ethereum is a P2P (peer-to-peer) network of computers (also known as nodes) all interconnected and used to store data in the distributed data structure (commonly refered to as a ledger). This means that a copy of the ledger is available to each node on the network. There are different types of networks that developers can utilize in order to deploy their dApps. (We will be building our programs on networks that will not actually cost any ether or money.) The three different
+Ethereum is an open source platform for building and deploying dApps (distrubuted/decentralized applications). Ethereum is a P2P (peer-to-peer) network of computers (also known as nodes) all interconnected and used to store data in the distributed data structure (commonly refered to as a ledger). This means that a copy of the ledger is available to each node on the network. There are different types of networks that developers can utilize in order to deploy their dApps. (We will be building our programs on networks that will not actually cost any ether or money.) The three different.
 
 **Types of Ethereum Networks:**
 
@@ -110,13 +110,13 @@ A private network is created and hosted on private infrastructure. Private netwo
 
 Lastly a consortium network is a private network but the network comprises of onodes that are managed by different organizations. No organization has total control over the data and chain, however it is shared within an organization and everyone can view and modify it's current state. These networks are accessible through the internet or completely private networks requiring VPNs (Virtual private networks).
 
+https://user-images.githubusercontent.com/65584733/182721343-878654ff-b494-4f3e-8f2a-0463456655b3.mov
+
 ### Installing and Configuring Geth
 
 Implementation of Ethereum nodes and clients is available in multiple languages, including Go, C++, Python, JavaScript, Java, and Ruby. The functionality or usability of these clients is the same across languages, and developers should choose the language implementation they are most comfortable with.
 
 Geth is the Go implementation which acts as an Ethereum client to connect to public and test networks, but also used to create the mining and EVM (transaction nodes) for private networks. Geth is a CLI tool written in Go and used for creating a node and miners on a private chain. This lecture will provide how to install Geth on macOS.
-
-https://user-images.githubusercontent.com/65584733/182721343-878654ff-b494-4f3e-8f2a-0463456655b3.mov
 
 ## :warning: WARNING USING **`$ Geth`** COMMAND
 
@@ -151,75 +151,6 @@ Geth can be used to connect to a public network, there are multiple different ne
 
 ![geth--mainnet](https://user-images.githubusercontent.com/65584733/182727608-903f27a5-dbdc-47d2-ac9c-1b82d6b47951.png)
 
-#### IV. Creating a Private Test Network
-
-A private network is composed of multiple Ethereum nodes that can only connect to each other. In order to run multiple nodes locally, each one requires a separate data directory (--datadir). The nodes must also know about each other and be able to exchange information, share an initial state and a common consensus algorithm. The remainder of this page will explain how to configure Geth so that these basic requirements are met, enabling a private network to be started. After you have installed Geth, it can be configured to run locally without connecting to any network on the internet. Every chain and network has a genesis block or first block. This block does not have a parent and emulates a head node of a linkedList data structure. This block is conventionally called the genesis block and `genesis.json` file is required to create this first block.
-
-1. create the first/genesis block **`genesis.json`**
-
-```
-{
-    "config" : {
-        "chainID": 999,
-        "homesteadBlock": 0,
-        "eip155Block": 0,
-        "eip158Block": 0,
-        "byzantiumBlock": 0,
-        "constantinopleBlock": 0,
-        "petersburgBlock": 0,
-        "istanbulBlock": 0,
-        "ethash":{}
-    },
-    "nonce": "0x0",
-    "timestamp": "0x62272fde",
-    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "gasLimit": "0x47b760",
-    "difficulty": "0x0",
-    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "coinbase": "0x0000000000000000000000000000000000000000",
-    "alloc": {},
-    "number": "0x0",
-    "gasUsed": "0x0",
-    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "baseFeePerGas": null
-}
-```
-
-2.  Initialize the private network
-
-    `genesis.json` file should be passed to geth to initiaze your private network. The geth node also needs to store the blockchain data and account keys. This information should also be provided to Geth while initializing the private network.
-
-3.  Command Line Input for network initialization
-
-The following `geth init` command initializes the node with the `genesis.json` file and target data directory location to store the chain data and key store information:
-
-`init Bootstrap and initialize a new genesis block`
-
-`-th init ./genesis.json --datadir=./`
-`geth init ./genesis.json --datadir=./`
-
-##### BREAK HERE WILL BE BACK TOMORROW I NEED HELP WITH FOLLOW ERR
-
-`Fatal: failed to write genesis block: database contains incompatible genesis`
-
-https://ethereum.stackexchange.com/questions/17202/fatal-failed-to-write-genesis-block-wrong-genesis-block-in-database
-
-```
-owner@morgan Ethereum % ls
-genesis.json	geth		keystore
-owner@morgan Ethereum % geth init genesis.json
-INFO [08-03|19:35:44.720] Maximum peer count                       ETH=50 LES=0 total=50
-INFO [08-03|19:35:44.726] Set global gas cap                       cap=50,000,000
-INFO [08-03|19:35:44.727] Allocated cache and file handles         database=/Users/owner/Library/Ethereum/geth/chaindata cache=16.00MiB handles=16
-INFO [08-03|19:35:47.193] Opened ancient database                  database=/Users/owner/Library/Ethereum/geth/chaindata/ancient readonly=false
-INFO [08-03|19:35:47.206] Persisted trie from memory database      nodes=0 size=0.00B time="196.417µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
-Fatal: Failed to write genesis block: database contains incompatible genesis (have d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3, new bd71b8d9165ecac47d33e22558fa4bb2397e800ab47ef36b0fdbb23856c2546c)
-owner@morgan Ethereum %
-
-```
-
-#### IV. Creating a Private Test Network
-
 #### IV. `Hello World`
 
 - Ethereum network
@@ -229,7 +160,3 @@ owner@morgan Ethereum %
 - Installing the solidity compiler
 - Installing the web3 framework
 - Installing and working with MetaMask
-
-```
-
-```
