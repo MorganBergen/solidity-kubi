@@ -5,6 +5,9 @@
 Introduction to solidity programming language
 Morgan Bergen, B.S. Computer Science - Director of Education [University of Kansas Blockchain Institute](https://kublockchain.com)
 
+[here 0](https://geth.ethereum.org/docs/interface/private-network)
+[here 1](https://geth.ethereum.org/docs/getting-started)
+
 ### Learning Objectives
 
 By the end of this lecture you will have set a private network of multiple Geth nodes. An ethereum network is private if the nodes are not connected to the main network. Private only means reserved or isolated, rather than protected or secure. A fully controlled, private ethereum network is useful as a backend for core developers working on issues relating to networking/blockchain syncing. Private networks are also useful for Dapp developers testing multi-block and multi-user scenarios.
@@ -40,16 +43,26 @@ We will explore the various options for configuring a local private network. Thi
 
 ### 1. Choose a Network ID
 
-Ethereum Mainnet has it's network ID = 1. There are many other networks that Geth can connect to by providing alternative Chain IDs, some are testnets and others are alternative networks built from forks of the Geth source code. Providing a network ID that is not already being used by an existing network or testnet means the nodes using that network ID can only connect to each other, creating a private network. A list of current network IDs is available at [chainlist.org](https://chainlist.org). The network ID is controlled using then networkid flag. insert -> figure-1.1.png & figure-1.2.png
+Ethereum Mainnet has it's network ID = 1. There are many other networks that Geth can connect to by providing alternative Chain IDs, some are testnets and others are alternative networks built from forks of the Geth source code. Providing a network ID that is not already being used by an existing network or testnet means the nodes using that network ID can only connect to each other, creating a private network. A list of current network IDs is available at [chainlist.org](https://chainlist.org). The network ID is controlled using then networkid flag.
 
 <img src="https://github.com/MorganBergen/solidity-kubi/blob/main/lectures/lecture-01/figures/figure-1.1.png">
-<img src="https://github.com/MorganBergen/solidity-kubi/blob/main/lectures/lecture-01/figures/figure-1.2.png">
+<!-- <img src="https://github.com/MorganBergen/solidity-kubi/blob/main/lectures/lecture-01/figures/figure-1.2.png"> -->
 
 ### 2. Choose a Consensus Algorithm
 
-While the mainnetwork uses proof-of-work (PoW) to secure the blockchain, Geth also supports the 'Clique' proof-of-authority (PoA) consensus algorithm as an alternative for private networks. CLique is stronly remco
+While the mainnetwork uses proof-of-work (PoW) to secure the blockchain, Geth also supports the 'Clique' proof-of-authority (PoA) consensus algorithm as an alternative for private networks. Clique is strongly recommended for private testnets because PoA is far less resource-intensive than PoW. Clique is currently used as the consensus algorithm in public testnets such as Rinkeby and Görli Information regarding the Clique consensus algorithm is available here -> [Clique](https://eips.ethereum.org/EIPS/eip-225)
+
+**Clique** consensus is a PoA system where new blocks can be created by authoried 'signers' only. The clique consensus protocol is specified in EIP-225. The initial set of aurthozied signers is configured in the genesis block. Signers can be authorized and de-authorized using a voting mechanism. therefore allowing the set of signers to change while the blockchain operates. Clique can be configured to target any block time since it isn't tied to the difficulty adjustment.
 
 ### 3. Creating the Genesis Block
+
+Every blockchain starts with a genesis block. When Geth is run with default settings for the firts time, it commits the Mainnet genesis to the database. For a private network, it is generally preferable to use a different genesis block. The genesis block is configured using a `genesis.json` file whose path must be provided to Geth on start-up. When creating a genesis block, a few initial parameters for the private blockchain must be well defined:
+
+**Parameters**
+
+1. **`config`** Ethereum platform features enable at launch `config`. Enabling and disabling features once the blockchain is running requires scheduling a hard fork.
+
+2. Initial block gas limit
 
 ### 4. Initializing the Geth Database
 
