@@ -23,3 +23,86 @@ geth accout new --keystore geth-tutorial/keystore
 ```
 
 It is important to save the account address and the password somewhere secure. They will be used again soon in further steps. Please note that the account address shown below
+
+### OLD
+
+A private network is composed of multiple Ethereum nodes that can only connect to each other. In order to run multiple nodes locally, each one requires a separate data directory (--datadir). The nodes must also know about each other and be able to exchange information, share an initial state and a common consensus algorithm. The remainder of this page will explain how to configure Geth so that these basic requirements are met, enabling a private network to be started. After you have installed Geth, it can be configured to run locally without connecting to any network on the internet. Every chain and network has a genesis block or first block. This block does not have a parent and emulates a head node of a linkedList data structure. This block is conventionally called the genesis block and `genesis.json` file is required to create this first block.
+
+1. create the first/genesis block **`genesis.json`**
+
+```
+{
+    "config" : {
+        "chainID": 999,
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0,
+        "byzantiumBlock": 0,
+        "constantinopleBlock": 0,
+        "petersburgBlock": 0,
+        "istanbulBlock": 0,
+        "ethash":{}
+    },
+    "nonce": "0x0",
+    "timestamp": "0x62272fde",
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "gasLimit": "0x47b760",
+    "difficulty": "0x0",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "alloc": {},
+    "number": "0x0",
+    "gasUsed": "0x0",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "baseFeePerGas": null
+}
+```
+
+2.  Initialize the private network
+
+    `genesis.json` file should be passed to geth to initiaze your private network. The geth node also needs to store the blockchain data and account keys. This information should also be provided to Geth while initializing the private network.
+
+3.  Command Line Input for network initialization
+
+The following `geth init` command initializes the node with the `genesis.json` file and target data directory location to store the chain data and key store information:
+
+`init Bootstrap and initialize a new genesis block`
+
+`-th init ./genesis.json --datadir=./`
+`geth init ./genesis.json --datadir=./`
+
+##### BREAK HERE WILL BE BACK TOMORROW I NEED HELP WITH FOLLOW ERR
+
+`Fatal: failed to write genesis block: database contains incompatible genesis`
+
+https://ethereum.stackexchange.com/questions/17202/fatal-failed-to-write-genesis-block-wrong-genesis-block-in-database
+
+```
+owner@morgan Ethereum % ls
+genesis.json	geth		keystore
+owner@morgan Ethereum % geth init genesis.json
+INFO [08-03|19:35:44.720] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [08-03|19:35:44.726] Set global gas cap                       cap=50,000,000
+INFO [08-03|19:35:44.727] Allocated cache and file handles         database=/Users/owner/Library/Ethereum/geth/chaindata cache=16.00MiB handles=16
+INFO [08-03|19:35:47.193] Opened ancient database                  database=/Users/owner/Library/Ethereum/geth/chaindata/ancient readonly=false
+INFO [08-03|19:35:47.206] Persisted trie from memory database      nodes=0 size=0.00B time="196.417µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+Fatal: Failed to write genesis block: database contains incompatible genesis (have d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3, new bd71b8d9165ecac47d33e22558fa4bb2397e800ab47ef36b0fdbb23856c2546c)
+owner@morgan Ethereum %
+
+```
+
+#### IV. Creating a Private Test Network
+
+#### IV. `Hello World`
+
+- Ethereum network
+- Intsalling and Configuring Geth
+- Creating a private network
+- Intsalling ganache-cli
+- Installing the solidity compiler
+- Installing the web3 framework
+- Installing and working with MetaMask
+
+```
+
+```
