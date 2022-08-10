@@ -24,9 +24,10 @@ Details regarding solidity concepts like externally owned accounts, contract acc
 │   ├── lecture-0
 │   │   └── README.md               # introduction, enviroment configuration
 │   │       │
-│   │       ├── geth-help.txt       # console output preview
-│   │       ├── geth--mainnet.txt   # console output preview
-│   │       └── ...
+│   │       ├── brew-install.png    # homebrew install preview of installing ethereum and geth
+│   │       ├── geth-help.txt       # console output preview of geth help command
+│   │       ├── geth--mainnet.txt   # console output preview of geth mainnet command
+│   │       └── geth--mainnet.png   # image console ouput of geth mainnet command
 │   │
 │   └── lecture-1
 │       └── README.md               # private network set up
