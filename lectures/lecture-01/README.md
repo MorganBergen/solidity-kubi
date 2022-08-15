@@ -62,7 +62,7 @@ Every blockchain starts with a genesis block. When Geth is run with default sett
 
 1. **`config`** Ethereum platform features enable at launch `config`. Enabling and disabling features once the blockchain is running requires scheduling a hard fork.
 
-2. Initial block gas limit
+2. Initial block gas limits
 
 ### 4. Initializing the Geth Database
 
