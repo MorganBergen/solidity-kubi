@@ -26,6 +26,8 @@ A private network is composed of multiple Ethereum nodes that can only connect t
 
 # step 0: configure Geth
 
+Geth is the main Ethereum CLI client tool. It is the entry point into the Ethereum network (mainnet, privatenet, or testnet) all capable of running as a full node (as the default), archive node (retaining all historial states), or a light node (retrieving data live). It can be used by other processes as a gateway into the Ethereum network via JSON RPC endpoints exposed on top of HTTP, WebSockets, and IPC transports.
+
 We will explore the various options for configuring a local private network. This step will show how to set up and launch a private network, unlock the associated accounts, attach a console to check the network status and make some basic interactions.
 
 ### Learning Objectives:
@@ -46,7 +48,6 @@ We will explore the various options for configuring a local private network. Thi
 Ethereum Mainnet has it's network ID = 1. There are many other networks that Geth can connect to by providing alternative Chain IDs, some are testnets and others are alternative networks built from forks of the Geth source code. Providing a network ID that is not already being used by an existing network or testnet means the nodes using that network ID can only connect to each other, creating a private network. A list of current network IDs is available at [chainlist.org](https://chainlist.org). The network ID is controlled using then networkid flag.
 
 <img src="https://github.com/MorganBergen/solidity-kubi/blob/main/lectures/lecture-01/figures/figure-1.1.png">
-<!-- <img src="https://github.com/MorganBergen/solidity-kubi/blob/main/lectures/lecture-01/figures/figure-1.2.png"> -->
 
 ### 2. Choose a Consensus Algorithm
 
@@ -60,9 +61,19 @@ Every blockchain starts with a genesis block. When Geth is run with default sett
 
 **Parameters**
 
-1. **`config`** Ethereum platform features enable at launch `config`. Enabling and disabling features once the blockchain is running requires scheduling a hard fork.
+1. **`config`** Ethereum platform features enable at launch `config`. Enabling and disabling features once the blockchain is running requires scheduling a hard fork
 
-2. Initial block gas limits
+- **"hard fork"** A hard fork is a permanent divergence in the blockchain; also kwon as a hard forking change. One commonly occurs when nonupgraded nodes can't validate blocks created by upgraded nodes that follow newer consensus rules. This is not to be confused with the term "Git fork"
+
+2. `gaslimit`
+   Initial block gas limit is in variable `gasLimit`. This impacts how much EVM computation can happen within a single block. Mirroring the main Ethereum network is generally a good choice, the block gas limit can be adjusted after launching the `--miner.gastarget`
+
+3. `alloc`
+   `alloc` is the initial allocation of ether. It determines how much ether is available to the addresses listed in the genesis block. Additional ether can be created through mining as the chain progresses.
+
+```
+geth account new --datadir data
+```
 
 ### 4. Initializing the Geth Database
 
@@ -159,7 +170,7 @@ OPTIONS:
 
 5.  DESCRIPTION:
 
-Geth account will manage accounts, list all existing accounts, import a private key into a new account, and create a new account or update an existing account The `geth account` command supports an interactive mode, when you are prompted for password as well as non-interactive mode where passwords are supplied via a given password file. Non-interactive mode is only meant for scripted use on test networks or known safe enviroments. Make sure you remember the password you gave when creating a new account (eith either new or import). Without it you are not able to unlock your account. Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly. It is safe to transfer the enire directory of the individual keys therein between ethereum nodes by simply coping. figure-1.0.png
+Manage accounts lets you create new accounts, list all existing accounts, import a private key into a new account, migrate to newest key format and change your password. The `geth account` command supports an interactive mode, when you are prompted for password as well as non-interactive mode where passwords are supplied via a given password file. Non-interactive mode is only meant for scripted use on test networks or known safe enviroments. Make sure you remember the password you gave when creating a new account (eith either new or import). Without it you are not able to unlock your account. Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly. It is safe to transfer the enire directory of the individual keys therein between ethereum nodes by simply coping. figure-1.0.png
 
 To generate a new account in Geth.
 
@@ -267,14 +278,116 @@ owner@morgan Ethereum %
 - Installing the web3 framework
 - Installing and working with MetaMask
 
+# End-to-end example
+
+1. `mkdir node1 node2`
+
+2. `geth -datadir node1 account new`
+3. `geth -datadir node2 account new`
+
+- this command will have an associated account that will receive some ether at launch
+- the following command creates an account for node1
+- the keyfile and account password should be backup securely.
+
+# node1
+
+Public address of the key: 0xBE09CDd12e7A08E7eBb8837A8A36117baf97EB18
+Path of the secret key file: node1/keystore/UTC--2022-08-15T15-37-03.405888000Z--be09cdd12e7a08e7ebb8837a8a36117baf97eb1
+
+# node2
+
+Public address of the key: 0x8ce72b1252D335a36fb950Bb92412Bd5205378Eb
+Path of the secret key file: node2/keystore/UTC--2022-08-15T15-43-10.830856000Z--8ce72b1252d335a36fb950bb92412bd5205378e
+
 ```
+geth
+│
+├── node1: "be09cdd12e7a08e7ebb8837a8a36117baf97eb18"
+│   │
+│   ├── keystore
+│   │   └── UTC--2022-08-15T15-37-03.405888000Z--be09cdd12e7a08e7ebb8837a8a36117baf97eb18
+│   │
+│   ├── genesis.json
+│   └── password.txt    # node1 - 0xBE09CDd12e7A08E7eBb8837A8A36117baf97EB18
+│                       # passcode - password
+│
+│
+├── node2:  "8ce72b1252d335a36fb950bb92412bd5205378eb"
+│   │
+│   ├── keystore
+│   │   └── UTC--2022-08-15T15-43-10.830856000Z--8ce72b1252d335a36fb950bb92412bd5205378eb
+│   │
+│   ├── genesis.json
+│   └── password.txt    # node2 - 0x8ce72b1252D335a36fb950Bb92412Bd5205378Eb
+|                       # passcode - password
+│
+└── .
+
+
+./geth --datadir node1 --port 30306 --bootnodes enode://f7aba85ba369923bffd3438b4c8fde6b1f02b1c23ea0aac825ed7eac38e6230e5cadcf868e73b0e28710f4c9f685ca71a86a4911461637ae9ab2bd852939b77f@127.0.0.1:0?discport=30305  --networkid 123454321 --unlock 0xC1B2c0dFD381e6aC08f34816172d6343Decbb12b --password node1/password.txt
 
 ```
 
 ```
 
-```
+In order to unlock the accounts later the passwords for each account should be saved in a text file in each node's data directory.
+The account address in the `alloc` field should be replaced with those created for each node in the previous step without the leading 0x.
+
+"alloc": {
+    "be09cdd12e7a08e7ebb8837a8a36117baf97eb18": { "balance": "300000" },
+    "8ce72b1252d335a36fb950bb92412bd5205378eb": { "balance": "400000" }
+  }
+
+The account address in the `alloc` field should be replaced with those creaed for each node in the previous step.
+Public address of the key: 0xC1B2c0dFD381e6aC08f34816172d6343Decbb12b
+Path of the secret key file: node1/keystore/UTC--2022-05-13T14-25-49.229126160Z--c1b2c0dfd381e6ac08f34816172d6343decbb12b
 
 ```
 
+`geth init --datadir node1 genesis.json`
+
+```console
+
+owner@morgan node1 % ls
+genesis.json	keystore	password.txt
+owner@morgan node1 % geth init --datadir node1 genesis.json
+INFO [08-15|11:43:00.355] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [08-15|11:43:00.360] Set global gas cap                       cap=50,000,000
+INFO [08-15|11:43:00.361] Allocated cache and file handles         database=/Users/owner/Library/Ethereum/node1/node1/geth/chaindata cache=16.00MiB handles=16
+INFO [08-15|11:43:00.644] Opened ancient database                  database=/Users/owner/Library/Ethereum/node1/node1/geth/chaindata/ancient readonly=false
+INFO [08-15|11:43:00.646] Writing custom genesis block
+INFO [08-15|11:43:00.651] Persisted trie from memory database      nodes=3 size=397.00B time="328.416µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [08-15|11:43:00.654] Successfully wrote genesis state         database=chaindata hash=3b2f11..39e4ec
+INFO [08-15|11:43:00.654] Allocated cache and file handles         database=/Users/owner/Library/Ethereum/node1/node1/geth/lightchaindata cache=16.00MiB handles=16
+INFO [08-15|11:43:00.898] Opened ancient database                  database=/Users/owner/Library/Ethereum/node1/node1/geth/lightchaindata/ancient readonly=false
+INFO [08-15|11:43:00.899] Writing custom genesis block
+INFO [08-15|11:43:00.900] Persisted trie from memory database      nodes=3 size=397.00B time="511.292µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [08-15|11:43:00.903] Successfully wrote genesis state         database=lightchaindata hash=3b2f11..39e4ec
+owner@morgan node1 % pwd
+/Users/owner/Library/Ethereum/node1
+owner@morgan node1 %
+
 ```
+
+You can use the `geth init` command in order to set up the genesis file.
+The next step is to configure a bootnode, this can be any node, but for this tutorial the developer tool
+`bootnode`
+
+```
+enode://8fe73c36ca69f73394df862309d39894d1f4d417f6e7498a424c906db4d8d92982faf7aa5b0fc1f4db8339c1101e0105ec452b636b9011172f32d00c80fcfa89@127.0.0.1:0?discport=30305
+
+```
+
+```console
+owner@morgan Ethereum % geth account list
+INFO [08-15|12:31:49.919] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [08-15|12:31:49.923] Set global gas cap                       cap=50,000,000
+Account #0: {8ce72b1252d335a36fb950bb92412bd5205378eb} keystore:///Users/owner/Library/Ethereum/keystore/UTC--2022-08-15T15-37-03.405888000Z--be09cdd12e7a08e7ebb8837a8a36117baf97eb18
+Account #1: {8ce72b1252d335a36fb950bb92412bd5205378eb} keystore:///Users/owner/Library/Ethereum/keystore/UTC--2022-08-15T15-43-10.830856000Z--8ce72b1252d335a36fb950bb92412bd5205378eb
+owner@morgan Ethereum % pwd
+/Users/owner/Library/Ethereum
+
+```
+
+Public address of the key: 0x8ce72b1252D335a36fb950Bb92412Bd5205378Eb
+Path of the secret key file: node2/keystore/UTC--2022-08-15T15-43-10.830856000Z--8ce72b1252d335a36fb950bb92412bd5205378eb
