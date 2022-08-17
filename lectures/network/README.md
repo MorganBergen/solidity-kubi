@@ -3,7 +3,7 @@
 ## Creating a Private Test Network
 
 Introduction to solidity programming language
-Morgan Bergen, B.S. Computer Science - Director of Education [University of Kansas Blockchain Institute](https://kublockchain.com
+Morgan Bergen, B.S. Computer Science - Director of Education at [University of Kansas Blockchain Institute](https://kublockchain.com)
 
 This section will run through the commands for setting up a simple private network of two nodes.
 
