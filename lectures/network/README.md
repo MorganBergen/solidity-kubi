@@ -7,6 +7,35 @@ Morgan Bergen, B.S. Computer Science - Director of Education at [University of K
 
 This section will run through the commands for setting up a simple private network of two nodes.
 
+### steps
+
+1. `mkdir node0 node1`
+2. `cd node0` + `geth --datadir "./data" account new`
+3. `cd node1` + `geth --datadir "./data" account new`
+4. `geth`
+   - `1` configure a new genesis
+   - `` create a new genesis from scratch
+   - `` clique - proof-of-authority
+   - `5` how many seonds should blocks take
+   - `` control d,
+   - ``
+5. `cd node0` + `geth --datadir ./data init ../blockpoa.json`
+6. `cd node1` + `geth --datadir ./data init ../blockpoa.json`
+7. `mkdir bnode` + `cd bnode` + `bootnode -genkey boot.key`
+8. `bootnode -nodekey boot.key`
+9. `bootnode
+
+enode://1e7a4cfc685bdecf358d052931225b90161a38d7d4bc37537b8fe750e2e937adef0a39b143275966be0394d2699f43b303d1a1a7b0f14f45731b3a00086171aa@127.0.0.1:0?discport=30301
+
+Comma separated enode URLs for P2P discovery bootstrap
+enode will connect you to node0 and node1 to discover their peers
+
+creating a boot node will connect all of the nodes together, we are going to create a boot node and
+
+**notes**
+
+- which accounts are allowed to seal? proof of order, you need to authorize one node to authorize the transaction
+
 ### Steps
 
 1.  `mkdir node1 node2`
