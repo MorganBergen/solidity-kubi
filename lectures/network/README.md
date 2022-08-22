@@ -27,7 +27,7 @@ This section will run through the commands for setting up a simple private netwo
 
 enode://1e7a4cfc685bdecf358d052931225b90161a38d7d4bc37537b8fe750e2e937adef0a39b143275966be0394d2699f43b303d1a1a7b0f14f45731b3a00086171aa@127.0.0.1:0?discport=30301
 
-If you are getting the "flag provided but not defined: -rpc" error. Replace --rpc with --http and change --rpccorsdomain into --http.corsdomain and change --rpcport with --http.port
+If you are getting the "flag provided but not defined: -rpc"q error. Replace --rpc with --http and change --rpccorsdomain into --http.corsdomain and change --rpcport with --http.port
 
 Comma separated enode URLs for P2P discovery bootstrap
 enode will connect you to node0 and node1 to discover their peers
