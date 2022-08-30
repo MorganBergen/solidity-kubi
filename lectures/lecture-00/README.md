@@ -6,24 +6,24 @@ Morgan Bergen, B.S. Computer Science - Director of Education [University of Kans
 
 ## Learning Objective
 
-By the end of this lecture you will be able to build and deploy your first `HelloWorld.sol` program.
+By the end of this lecture you will be able to build and deploy your first `simple.sol` program.
 
 ```
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier:  GPL-3.0
+pragma solidity >= 0.4.16 < 0.9.0;
 
-pragma solidity >=0.7.0 <0.9.0;
+contract SimpleStorage {
 
-contract HelloWorld
-{
+    uint storedData;
 
-    string private stateVariable = "Hello World";
+    function set(uint x) public {
 
-    function GetHelloWorld() public view returns ( string memory)
-    {
-        return stateVariable;
+        storedData = x;
+
     }
 
 }
+
 ```
 
 #### I. Technical Requirements
@@ -160,7 +160,7 @@ Geth can be used to connect to a public network, there are multiple different ne
 - Installing the web3 framework
 - Installing and working with MetaMask
 
-#### IV. `Hello World` - Storage Contract Example
+#### IV. An Introduction to the simpliest version of a Smart Contract
 
 In this simple contract we will be setting a value of a variable and expose it for other contracts to access.
 
@@ -200,4 +200,6 @@ Later you will see how you can improse access resturctions os that only you can 
 
 ```
 
-A contract in the sense of Solidity is a collection of code (functions) and data (states) that resides at a specific address on the Ethereum blockchain
+A contract in the sense of Solidity is a collection of code (functions) and data (states) that resides at a specific address on the Ethereum blockchain. Now this contract does not do much except store a number.
+Because of the infrastructure built by Ethereum, anyone can store a single number that is accessible by anyone in the world without a (feasible) way to prevent you from publishing this number. Anyone could call set aain with a different value adn overwrite your number, however the number is still stored in the history of the blockchain.
+Later you will see how you can improse access resturctions os that only you can alter the number.
