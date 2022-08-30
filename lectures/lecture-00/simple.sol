@@ -8,6 +8,7 @@ pragma solidity >=0.4.16 <0.9.0;
 // a contract is a collection of functions and data, analogous to a class in C++.
 contract SimpleStorage {
     // private state variables are variables that are only visible within the contract.
+    // this is a primitive type, meaning it is stored directly in the contract's storage.
     uint256 storedData;
 
     // public method that defines set in order to modify the storedData variable.
