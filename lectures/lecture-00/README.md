@@ -200,6 +200,7 @@ This contract does not do much except store a number.
 Because of the infrastructure built by Ethereum, anyone can store a single number that is accessible by anyone in the world without a (feasible) way to prevent you from publishing this number.  Anyone could call set aain with a different value adn overwrite your number, however the number is still stored in the history of the blockchain.
 Later you will see how you can improse access resturctions os that only you can alter the number.
 
+
 */
 
 
