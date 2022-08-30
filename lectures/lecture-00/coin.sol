@@ -32,8 +32,19 @@ contract Coin {
         balances[receiver] += amount;
     }
 
-    // Errors allow you to provide informtion about why an operation failed.  They are returned to the caller of the function.
+    // Errors allow you to provide informtion about why an operation failed.  They are returned to the caller of the function.  However what is error?  is it a data type?  or does it work analagous to an assert statement?  Is it static?
     error InsufficientBalance(uint256 request, uint256 available);
 
-    // what is error?  is it a data type?  or does it work analagous to an assert statement?
+    // sends an amount of existing coins from any caller to an address.
+    function send(address reciever, uint256 amount) public {
+        if (amount > balances[msg.sender]) {
+            revert InsufficientBalance({
+                request: amount,
+                available: balances[msg.sender]
+            });
+        }
+        balances[msg.sender] -= amount;
+        balances[reciever] += amount;
+        emit Sent(msg.sender, reciever, amount);
+    }
 }

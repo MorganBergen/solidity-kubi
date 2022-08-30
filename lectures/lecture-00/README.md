@@ -212,3 +212,39 @@ Later you will see how you can improse access resturctions os that only you can 
 #### V. Subcurrency Example
 
 coin.sol
+
+**Pre-processor Directives and Versions**
+
+```
+// SPDX-License-Identifier:  GPL-3.0
+pragma solidity ^0.8.4;
+```
+
+**state variable declaration**
+
+```
+contract Coin {
+
+    address public minter;
+    ...
+}
+```
+
+In this line the state variable is of data type **address**.
+
+### `Address` Data Type (High Level Overview)
+
+The address type comes in two forms
+
+1. `address`: holds a 20 byte value (size of an Ethereum Address)
+2. `address payable`: Is the same address, however it contains the members `transfer` & `send`
+
+`address` is a 160-bit value that does not allow any arithemtic operations, it is intended for storing addresses of contracts (such as `SimpleStorage.storedData` from our `simple.sol` module), or a hash of the public half of a keypair belonging to external accounts.
+
+`address payable` is the address you send Ether to, address payable allows for accepting payments from smart contacts irrespective if that contract was built to accept Ether or not.
+
+### `Accounts`
+
+There are two kinds of accounts in Ethereum which share the same address space:
+**External Accounts** are controlled by public-private key pairs.
+**Contract Accounts** are controlled
