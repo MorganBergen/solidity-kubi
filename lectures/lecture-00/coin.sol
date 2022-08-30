@@ -13,12 +13,18 @@ contract Coin {
     // keyword public declares minter as a public member state/variable which can be viewed by anyone.
     // accessible from other contracts
     address public minter;
+
+    /*
+    implicitly the compiler will create a method that allows the minter to cre
+    */
+
     mapping(address => uint256) public balances;
 
     // Events allow clients to react to specific contract changes you declare
     event Sent(address from, address to, uint256 amount);
 
-    // Coin becomes constructed when the contract is deployed.
+    // Coin becomes constructed when the contract is deployed, no parameters are required.
+    // minter is set to the address of the contract itself.
     constructor() {
         minter = msg.sender;
     }
