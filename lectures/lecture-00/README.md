@@ -1,6 +1,6 @@
 # `lecture-0`
 
-Introduction to solidity programming language
+Introduction to solidity programming language. Introduction to the Compilation Process onto the blockchain.
 
 Morgan Bergen, B.S. Computer Science - Director of Education [University of Kansas Blockchain Institute](https://kublockchain.com)
 
@@ -25,6 +25,11 @@ contract SimpleStorage {
 }
 
 ```
+
+## What is solidity?
+
+Solidity is an object-oriented, high-level language for implementing smart contracts. Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.
+Solidity is a curly-bracket language designed to target the Ethereum Virtual Machine (EVM). It is influenced by C++, Python and JavaScript. You can find more details about which languages Solidity has been inspired by in the language influences section. Solidity is statically typed, supports inheritance, libraries and complex user-defined types among other features. With Solidity you can create contracts for uses such as voting, crowdfunding, blind auctions, and multi-signature wallets. When deploying contracts, you should use the latest released version of Solidity. Apart from exceptional cases, only the latest version receives security fixes. Furthermore, breaking changes as well as new features are introduced regularly. We currently use a 0.y.z version number to indicate this fast pace of change.
 
 #### I. Technical Requirements
 
@@ -203,3 +208,7 @@ Later you will see how you can improse access resturctions os that only you can 
 A contract in the sense of Solidity is a collection of code (functions) and data (states) that resides at a specific address on the Ethereum blockchain. Now this contract does not do much except store a number.
 Because of the infrastructure built by Ethereum, anyone can store a single number that is accessible by anyone in the world without a (feasible) way to prevent you from publishing this number. Anyone could call set aain with a different value adn overwrite your number, however the number is still stored in the history of the blockchain.
 Later you will see how you can improse access resturctions os that only you can alter the number.
+
+#### V. Subcurrency Example
+
+coin.sol
