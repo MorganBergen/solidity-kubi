@@ -6,7 +6,7 @@ Morgan Bergen, B.S. Computer Science - Director of Education [University of Kans
 
 ## Learning Objective
 
-By the end of this lecture you will be able to build and deploy your first `simple.sol` program.
+By the end of this lecture you will be able to build and deploy your first `simple.sol` program
 
 ```
 // SPDX-License-Identifier:  GPL-3.0

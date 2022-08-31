@@ -1,9 +1,8 @@
 /*
-
 The following contract implements the most primitive form of a cryptocurrency.
 The contract allows only its reactor to create new coins.
-Anyone can send coins to each other without a need to registering with a username and password, all you need is an Ethereum keypair.
-
+Anyone can send coins to each other without a need to registering with a username and password, 
+all you need is an Ethereum keypair.
 */
 
 // SPDX-License-Identifier:  GPL-3.0
@@ -13,10 +12,6 @@ contract Coin {
     // keyword public declares minter as a public member state/variable which can be viewed by anyone.
     // accessible from other contracts
     address public minter;
-
-    /*
-    implicitly the compiler will create a method that allows the minter to cre
-    */
 
     mapping(address => uint256) public balances;
 
@@ -38,7 +33,7 @@ contract Coin {
         balances[receiver] += amount;
     }
 
-    // Errors allow you to provide informtion about why an operation failed.  They are returned to the caller of the function.  However what is error?  is it a data type?  or does it work analagous to an assert statement?  Is it static?
+    // Errors allow you to provide informtion about why an operation failed.
     error InsufficientBalance(uint256 request, uint256 available);
 
     // sends an amount of existing coins from any caller to an address.

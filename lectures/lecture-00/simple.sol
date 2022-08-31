@@ -3,6 +3,9 @@
 
 //pragmas are instructions that are executed by the compiler before the code is compiled and executed.
 //this is a preprocessor directive analogous to C++'s #include directive.
+// does not import a library
+// solidty-by-example.org/hello-world
+// will call the compiler
 pragma solidity >=0.4.16 <0.9.0;
 
 // a contract is a collection of functions and data, analogous to a class in C++.

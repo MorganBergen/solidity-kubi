@@ -8,10 +8,7 @@ contract Main {
     }
 }
 
-contract Main2 {
-    string private stateVariable = "hello world";
-
-    function getMain() public view returns (string memory) {
-        return stateVariable;
-    }
-}
+/*
+human node
+github.com/sx328
+*/
