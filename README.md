@@ -16,6 +16,7 @@ A ten part lecture series on the introduction to Blockchain, Ethereum, and Smart
 Details regarding solidity concepts like externally owned accounts, contract accounts, its currency in terms of gas and Ether will be discussed. Ethereum is heavily based on cryptography and you’ll also learn about hash, encryption, and usage of keys for creating transactions and accounts. How are transactions and accounts created, how gas is paid for each transaction, difference between message calls and transactions, and storage of code and state management will be explained in detailed.  All information within this repo has been allocated from the follow two sources.
 
 [solidity documentation](https://docs.soliditylang.org/_/downloads/en/latest/pdf/)
+
 [geth documentation](https://github.com/ethereum/go-ethereum)
 
 ## directory tree
@@ -25,28 +26,29 @@ Details regarding solidity concepts like externally owned accounts, contract acc
 └── lectures
 │   │
 │   ├── lecture-00
-│   │   └── README.md               # intro to primitive smart contract, enviroment configuration
+│   │   └── README.md               # intro to smart contracts and enviromental configuration
 │   │       │
-│   │       ├── brew-install.png    # homebrew install preview of installing ethereum and geth
-│   │       ├── geth-help.txt       # console output preview of geth help command
-│   │       ├── geth--mainnet.txt   # console output preview of geth mainnet command
-│   │       └── geth--mainnet.png   # image console ouput of geth mainnet command
+│   │       ├── figures             # console images for installing ethereum and geth
+│   │       ├── coin.sol            # primitive cryptocurency
+│   │       ├── counter.sol         # primitive smart contract
+│   │       ├── simple.sol          # simple storage smart contract
+│   │       └── hello-world.sol     # hello world smart contract
 │   │
 │   └── lecture-01
 │       └── README.md               # private network set up
 │       ├── example.json            # manual set up of configs - gaslimit, chainid : 12345
-│       ├── figures                 # terminal output png
-│       └── genesis                 # experimental genesis nodes
+│       ├── /figures                # terminal output png
+│       └── /genesis                # experimental genesis nodes
 │
 ├── network
-│   └── figures
+│   └── README.md                   # a simple private network of two nodes
 │       │
-│       ├── figure-0.0.png
-│       ├── figure-0.1.png
-│       ├── figure-0.2.png
-│       ├── figure-0.3.png
-│       ├── figure-0.4.png
-│       └── figure-0.5.png
+│       ├── 
+│       ├── 
+│       ├── /node1
+│       ├── /node2
+│       ├── /bnode
+│       └── /morgannetwork
 │
 └── ...
 ```
