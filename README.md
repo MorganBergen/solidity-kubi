@@ -19,7 +19,7 @@ Details regarding solidity concepts like externally owned accounts, contract acc
 
 [geth documentation](https://github.com/ethereum/go-ethereum)
 
-## directory tree
+## Directory Tree
 
 ```
 .
