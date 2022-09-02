@@ -23,21 +23,21 @@ Details regarding solidity concepts like externally owned accounts, contract acc
 .
 └── lectures
 │   │
-│   ├── lecture-0
-│   │   └── README.md               # introduction, enviroment configuration
+│   ├── lecture-00
+│   │   └── README.md               # intro to primitive smart contract, enviroment configuration
 │   │       │
 │   │       ├── brew-install.png    # homebrew install preview of installing ethereum and geth
 │   │       ├── geth-help.txt       # console output preview of geth help command
 │   │       ├── geth--mainnet.txt   # console output preview of geth mainnet command
 │   │       └── geth--mainnet.png   # image console ouput of geth mainnet command
 │   │
-│   └── lecture-1
+│   └── lecture-01
 │       └── README.md               # private network set up
-│       ├──
-│       ├──
-│       └──
+│       ├── example.json            # manual set up of configs - gaslimit, chainid : 12345
+│       ├── figures                 # terminal output png
+│       └── genesis                 # experimental genesis nodes
 │
-├── assets
+├── network
 │   └── figures
 │       │
 │       ├── figure-0.0.png
