@@ -3,7 +3,7 @@
 # `learn solidity with KUBI`
 ![maintenance-status](https://img.shields.io/badge/maintenance-experimental-blue.svg)
 ![maintenance-status](https://img.shields.io/badge/maintenance-as--is-yellow.svg)
-![maintenance-status](https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg)
+![maintenance-status](https://img.shields.io/badge/maintenance-passively--maintained-yellowgreen.svg)
 
 ## Introduction to solidity programming language
 
