@@ -4,6 +4,8 @@ Introduction to solidity programming language. Introduction to the Compilation P
 
 Morgan Bergen, B.S. Computer Science - Director of Education [University of Kansas Blockchain Institute](https://kublockchain.com)
 
+![cover](https://user-images.githubusercontent.com/65584733/188204397-74f80efe-7234-424a-ba55-23ce0d5e2b4a.jpeg)
+
 ## Learning Objective
 
 By the end of this lecture you will be able to build and deploy your first `simple.sol` program
