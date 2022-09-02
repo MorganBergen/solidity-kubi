@@ -11,19 +11,19 @@ Morgan Bergen, B.S. Computer Science - Director of Education
 
 [ **University of Kansas Blockchain Institute** ](https://kublockchain.com)
 
-## Description
+### Description
 
 A multi part lecture series on an introduction to Blockchain, Ethereum, and Smart Contracts. This repo will take you through how to deploy an application on an ethereum blockchain network, understand the languages terminology and jargon, advantages, and problems it’s trying to solve. This lecture series will place an emphasis to explain the important semantic concepts of solidity and it's architecture in detail.
 
 Details regarding solidity concepts like externally owned accounts, contract accounts, its currency in terms of gas and Ether will be discussed. Ethereum is heavily based on cryptography and you’ll also learn about hash, encryption, and usage of keys for creating transactions and accounts. How are transactions and accounts created, how gas is paid for each transaction, difference between message calls and transactions, and storage of code and state management will be explained in detailed.  All information within this repo has been allocated from the follow two sources.
 
-[solidity documentation](https://docs.soliditylang.org/_/downloads/en/latest/pdf/)
-
-[geth documentation](https://github.com/ethereum/go-ethereum)
+## Sources
+1.  [solidity documentation](https://docs.soliditylang.org/_/downloads/en/latest/pdf/)
+2.  [geth documentation](https://github.com/ethereum/go-ethereum)
 
 ![blockchain](https://user-images.githubusercontent.com/65584733/188204955-0a0d20c3-867f-4e65-8bf3-1b3422e227ab.png)
 
-## Directory Tree
+### Directory Tree
 
 ```
 .
