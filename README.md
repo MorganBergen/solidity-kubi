@@ -13,11 +13,12 @@ Morgan Bergen, B.S. Computer Science - Director of Education
 
 A ten part lecture series on the introduction to Blockchain, Ethereum, and Smart Contracts. This repo will take you through how to deploy an application on an ethereum blockchain network, understand the languages terminology and jargon, advantages, problems it’s trying to solve, and industry relevance. This lecture series will explain the important concepts of solidity and it's architecture in detail.
 
-Details regarding solidity concepts like externally owned accounts, contract accounts, its currency in terms of gas and Ether will be discussed. Ethereum is heavily based on cryptography and you’ll also learn about hash, encryption, and usage of keys for creating transactions and accounts. How are transactions and accounts created, how gas is paid for each transaction, difference between message calls and transactions, and storage of code and state management will be explained in detailed.
+Details regarding solidity concepts like externally owned accounts, contract accounts, its currency in terms of gas and Ether will be discussed. Ethereum is heavily based on cryptography and you’ll also learn about hash, encryption, and usage of keys for creating transactions and accounts. How are transactions and accounts created, how gas is paid for each transaction, difference between message calls and transactions, and storage of code and state management will be explained in detailed.  All information within this repo has been allocated from the follow two sources.
+
+[solidity documentation](https://docs.soliditylang.org/_/downloads/en/latest/pdf/)
+[geth documentation](https://github.com/ethereum/go-ethereum)
 
 ## directory tree
-
-[geth documentation](https://github.com/ethereum/go-ethereum)
 
 ```
 .
