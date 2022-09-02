@@ -7,9 +7,9 @@
 
 ## Introduction to solidity programming language
 
-[ **University of Kansas Blockchain Institute** ](https://kublockchain.com)
-
 Morgan Bergen, B.S. Computer Science - Director of Education
+
+[ **University of Kansas Blockchain Institute** ](https://kublockchain.com)
 
 A multi part lecture series on an introduction to Blockchain, Ethereum, and Smart Contracts. This repo will take you through how to deploy an application on an ethereum blockchain network, understand the languages terminology and jargon, advantages, and problems it’s trying to solve. This lecture series will place an emphasis to explain the important semantic concepts of solidity and it's architecture in detail.
 
