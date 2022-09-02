@@ -1,6 +1,8 @@
 <img align="left" width=10% src="/assets/KU-Blockchain-logo.svg">
 
 # `learn solidity with KUBI`
+![maintenance-status](https://img.shields.io/badge/maintenance-experimental-blue.svg)
+![maintenance-status](https://img.shields.io/badge/maintenance-as--is-yellow.svg)
 
 ## Introduction to solidity programming language
 
