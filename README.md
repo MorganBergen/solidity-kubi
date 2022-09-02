@@ -1,6 +1,9 @@
 <img align="left" width=10% src="/assets/KU-Blockchain-logo.svg">
 
 # `learn solidity with KUBI`
+![maintenance-status](https://img.shields.io/badge/maintenance-experimental-blue.svg)
+![maintenance-status](https://img.shields.io/badge/maintenance-passively--maintained-yellowgreen.svg)
+![maintenance-status](https://img.shields.io/badge/maintenance-looking--for--maintainer-orange.svg)
 
 ## Introduction to solidity programming language
 
@@ -20,21 +23,21 @@ Details regarding solidity concepts like externally owned accounts, contract acc
 .
 └── lectures
 │   │
-│   ├── lecture-0
-│   │   └── README.md               # introduction, enviroment configuration
+│   ├── lecture-00
+│   │   └── README.md               # intro to primitive smart contract, enviroment configuration
 │   │       │
 │   │       ├── brew-install.png    # homebrew install preview of installing ethereum and geth
 │   │       ├── geth-help.txt       # console output preview of geth help command
 │   │       ├── geth--mainnet.txt   # console output preview of geth mainnet command
 │   │       └── geth--mainnet.png   # image console ouput of geth mainnet command
 │   │
-│   └── lecture-1
+│   └── lecture-01
 │       └── README.md               # private network set up
-│       ├──
-│       ├──
-│       └──
+│       ├── example.json            # manual set up of configs - gaslimit, chainid : 12345
+│       ├── figures                 # terminal output png
+│       └── genesis                 # experimental genesis nodes
 │
-├── assets
+├── network
 │   └── figures
 │       │
 │       ├── figure-0.0.png
