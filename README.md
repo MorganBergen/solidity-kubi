@@ -68,7 +68,7 @@ Details regarding solidity concepts like externally owned accounts, contract acc
 └── ...
 ```
 
-
+```zsh
 .
 ├── README.md
 ├── assets
@@ -381,3 +381,4 @@ Details regarding solidity concepts like externally owned accounts, contract acc
     └── test.md
 
 56 directories, 253 files
+```
