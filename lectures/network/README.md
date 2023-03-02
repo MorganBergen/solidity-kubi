@@ -1,92 +1,39 @@
-# `lecture-01`
+# blockchain network `morgannet` chainID 66046
 
-## Creating a Private Test Network
+detailed walk through on how to build your own private blockchain network.  in a real world scenerio a network will require a virtual machine to build, however since this chain is quite small we can build this network on your own personal computer with at least 8 gb of RAM.
 
-Introduction to solidity programming language
-Morgan Bergen, B.S. Computer Science - Director of Education at [University of Kansas Blockchain Institute](https://kublockchain.com)
+the consensus engine that we will be using is clique utilizing the proof-of-authority conensus model.
 
-This section will run through the commands for setting up a simple private network of two nodes.
+**contents**
 
-### steps
+1.  [instantiate nodes](#instantiate-nodes)
+2.  [instantiate boot node](#instantiate-boot-node)
+3.  [link nodes](#link-nodes)
+4.  [build network](#build-network)
+5.  [test network](#test-network)
 
-1. `mkdir node0 node1`
-2. `cd node0` + `geth --datadir "./data" account new`
-3. `cd node1` + `geth --datadir "./data" account new`
-4. `geth`
-   - `1` configure a new genesis
-   - `` create a new genesis from scratch
-   - `` clique - proof-of-authority
-   - `5` how many seonds should blocks take
-   - `` control d,
-   - ``
-5. `cd node0` + `geth --datadir ./data init ../blockpoa.json`
-6. `cd node1` + `geth --datadir ./data init ../blockpoa.json`
-7. `mkdir bnode` + `cd bnode` + `bootnode -genkey boot.key`
-8. `bootnode -nodekey boot.key`
-9. `bootnode
+it is always advisable to create a 3 node network.
 
-enode://1e7a4cfc685bdecf358d052931225b90161a38d7d4bc37537b8fe750e2e937adef0a39b143275966be0394d2699f43b303d1a1a7b0f14f45731b3a00086171aa@127.0.0.1:0?discport=30301
+## instantiate nodes
 
-If you are getting the "flag provided but not defined: -rpc"q error. Replace --rpc with --http and change --rpccorsdomain into --http.corsdomain and change --rpcport with --http.port
+`geth --datadir ./data account new`
 
-Comma separated enode URLs for P2P discovery bootstrap
-enode will connect you to node0 and node1 to discover their peers
+**`node0`**
 
-creating a boot node will connect all of the nodes together, we are going to create a boot node and
+-  public address of key   `0xdDafC4C7Bc370b02fa7ac036B2d3469Bd0D6490b`
+-  path of private key file `data/keystore/UTC--2023-03-01T02-38-51.129408000Z--ddafc4c7bc370b02fa7ac036b2d3469bd0d6490b`
+-  password                `password`
 
-**notes**
+**`node1`**
 
-- which accounts are allowed to seal? proof of order, you need to authorize one node to authorize the transaction
+-  public address of key    `0xF4260e2Fe5DBC5252ba67331724f78854DeC6abC`
+-  path of private key file  `data/keystore/UTC--2023-03-01T02-40-57.347420000Z--f4260e2fe5dbc5252ba67331724f78854dec6abc`
 
-### Steps
+## genesis file
 
-1.  `mkdir node1 node2`
+contains all of the relevant information about our private network
 
-- Each node will have an associated account that will recieve some ether at launch.
-- The following command creates an account for Node1, this will return a request for a password.
-- Once a password has been provided the following information is returned to the terminal.
-
-2.  `geth --datadir node1 account new`
-
-3.  `touch node1.txt`
-
-4.  `geth --datadir node2 account new`
-
-5.  `touch node2.txt`
-
-6.  `puppeth`
-
-7.  cd node1
-    `geth --datadir ./data init ../morgannetwork.json`
-
-8.  cd node2
-    `geth --datadir ./data init ../morgannetwork.json`
-
-connect two nodes and get them onto a network
-
-9.  `mkdir bnode` bnode is short for bootnode
-
-10. `bootnode -genkey boot.key`
-
-11. `bootnode -nodekey boot.key`
-
-`bootnode -nodekey ./boot.key `
-
-`./geth --datadir node1 -port 30301 --bootnode enode://396de4e86a44325d901880408897b13425254f2e3382b780220bc9a09f0a5ff2de2623c09592889f9b3da97f1374838f33ff80bc12409543b656c2f4df7e3851@127.0.0.1:0?discport=30301 --networkid 3168063999 -ipcdisable --syncmode full -rpc --password node1/password.txt`
-
-```dotnetcli
-
-geth --chainId 3168063999 --datadir "./data" --bootnode
-
-enode://396de4e86a44325d901880408897b13425254f2e3382b780220bc9a09f0a5ff2de2623c09592889f9b3da97f1374838f33ff80bc12409543b656c2f4df7e3851@127.0.0.1:0?discport=30301
-
---port 30303 -ipcdisable --syncmode full -rpc --allow-insecure-unlock
-
-./geth --datadir node1 --port 30306 --bootnodes enode://f7aba85ba369923bffd3438b4c8fde6b1f02b1c23ea0aac825ed7eac38e6230e5cadcf868e73b0e28710f4c9f685ca71a86a4911461637ae9ab2bd852939b77f@127.0.0.1:0?discport=30305  --networkid 123454321 --unlock 0xC1B2c0dFD381e6aC08f34816172d6343Decbb12b --password node1/password.txt
-
-https://youtu.be/eYj0vPcZAs8
-
-```
+`puppeth` is an inbuilt tool used with `geth`
 
 ```
 +-----------------------------------------------------------+
@@ -109,21 +56,71 @@ Sweet, you can set this via --network=morgannetwork next time!
 
 INFO [08-15|13:34:52.626] Administering Ethereum network name=morgannetwork
 WARN [08-15|13:34:52.628] No previous configurations found path=/Users/owner/.puppeth/morgannetwork
-
 ```
 
-### node1
+```zsh
+INFO [02-28|20:57:30.390] Administering Ethereum network           name=morgannet
+WARN [02-28|20:57:30.390] No previous configurations found         path=/Users/owner/.puppeth/morgannet
+```
 
-**address** 0xd087f43F069920b9a3e101837C2B1A432A671e47
-**password** password
-**secret key file path**
-/Users/owner/Documents/GitHub/solidity-kubi/lectures/network/node1/keystore
-/UTC--2022-08-15T17-53-18.182256000Z--d087f43f069920b9a3e101837c2b1a432a671e47
+how will i generate consensus blocks?  through the consensus mechanism `clique`
 
-### node2
+which nodes will authorize transactions, this will be `node0` which is the authority node.  `node0` will mine all the blocks. we will pre-fund the addresses of `node0` and `node1`.  the chain id is 66046
 
-**address** 0x0768ab569F4EFD35CbB39f3C58f921b9A1A7A1Fd
-**password** password
-**secret key file path**
-/Users/owner/Documents/GitHub/solidity-kubi/lectures/network/node2/keystore
-/UTC--2022-08-15T18-06-59.657684000Z--0768ab569f4efd35cbb39f3c58f921b9a1a7a1fd
+```
+geth --datadir ./data init ../morgannet.json
+INFO [02-28|21:11:45.550] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-28|21:11:45.553] Set global gas cap                       cap=50,000,000
+INFO [02-28|21:11:45.554] Allocated cache and file handles         database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node0/data/geth/chaindata cache=16.00MiB handles=16
+INFO [02-28|21:11:45.633] Opened ancient database                  database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node0/data/geth/chaindata/ancient/chain readonly=false
+INFO [02-28|21:11:45.633] Writing custom genesis block
+INFO [02-28|21:11:45.639] Persisted trie from memory database      nodes=357 size=50.70KiB time="559.583µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [02-28|21:11:45.640] Successfully wrote genesis state         database=chaindata hash=11dc1e..783e6e
+INFO [02-28|21:11:45.640] Allocated cache and file handles         database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node0/data/geth/lightchaindata cache=16.00MiB handles=16
+INFO [02-28|21:11:45.717] Opened ancient database                  database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node0/data/geth/lightchaindata/ancient/chain readonly=false
+INFO [02-28|21:11:45.717] Writing custom genesis block
+INFO [02-28|21:11:45.723] Persisted trie from memory database      nodes=357 size=50.70KiB time="493.708µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [02-28|21:11:45.723] Successfully wrote genesis state         database=lightchaindata hash=11dc1e..783e6e
+```
+
+```
+❯ geth --datadir ./data init ../morgannet.json
+INFO [02-28|21:12:29.236] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [02-28|21:12:29.239] Set global gas cap                       cap=50,000,000
+INFO [02-28|21:12:29.240] Allocated cache and file handles         database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node1/data/geth/chaindata cache=16.00MiB handles=16
+INFO [02-28|21:12:29.330] Opened ancient database                  database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node1/data/geth/chaindata/ancient/chain readonly=false
+INFO [02-28|21:12:29.330] Writing custom genesis block
+INFO [02-28|21:12:29.336] Persisted trie from memory database      nodes=357 size=50.70KiB time="554.208µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [02-28|21:12:29.336] Successfully wrote genesis state         database=chaindata hash=11dc1e..783e6e
+INFO [02-28|21:12:29.336] Allocated cache and file handles         database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node1/data/geth/lightchaindata cache=16.00MiB handles=16
+INFO [02-28|21:12:29.417] Opened ancient database                  database=/Users/owner/Documents/Github/solidity-kubi/lectures/large-network/node1/data/geth/lightchaindata/ancient/chain readonly=false
+INFO [02-28|21:12:29.417] Writing custom genesis block
+INFO [02-28|21:12:29.423] Persisted trie from memory database      nodes=357 size=50.70KiB time="544.542µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [02-28|21:12:29.423] Successfully wrote genesis state         database=lightchaindata hash=11dc1e..783e6e
+```
+
+## boot node
+
+there is currently no connection between node0 to node1
+
+`bootnode -genkey boot.key`
+
+`bootnode -nodekey boot.key`
+
+```zsh
+enode://78b7f2af438f26772fd34a7c520ae0cb045d4545f9c64a3f1cb46ed5977b0b2510c390146af316b56e86e8223a936a98827e6ca783f3c5e022e6fb427247a3c5@127.0.0.1:0?discport=30301
+Note: you're using cmd/bootnode, a developer tool.
+We recommend using a regular node as bootstrap node for production deployments.
+INFO [02-28|21:14:28.086] New local node record                    seq=1,677,640,468,086 id=5f25d5bb97613cbf ip=<nil> udp=0 tcp=0
+```
+
+this node will discover the peers in the network
+
+`geth --chainID 8063999 --datadir "./data" --bootnode` 
+`geth --chainId 3168063999 --datadir "./data" --bootnode
+
+enode://396de4e86a44325d901880408897b13425254f2e3382b780220bc9a09f0a5ff2de2623c09592889f9b3da97f1374838f33ff80bc12409543b656c2f4df7e3851@127.0.0.1:0?discport=30301
+
+--port 30303 -ipcdisable --syncmode full -rpc --allow-insecure-unlock
+
+./geth --datadir node1 --port 30306 --bootnodes enode://f7aba85ba369923bffd3438b4c8fde6b1f02b1c23ea0aac825ed7eac38e6230e5cadcf868e73b0e28710f4c9f685ca71a86a4911461637ae9ab2bd852939b77f@127.0.0.1:0?discport=30305  --networkid 123454321 --unlock 0xC1B2c0dFD381e6aC08f34816172d6343Decbb12b --password node1/password.txt`
